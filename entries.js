@@ -1,14 +1,14 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 19:15",
+  updated: "15 Nov, 19:45",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
-      status: "52 to 56 frames a second in every view of a busy region, up from 15 to 26 this morning. Left: the last stutters, the fastest speed and loading." },
+      status: "Measured on tonight\u2019s build: 51 to 78 frames a second in steady views (15 to 26 this morning), and the graphics card passes everywhere. Zooming still drops to 14 to 21; that is the next target." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,14 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "19:45", tags: ["Performance"], title: "Tonight's build, measured: the graphics card passes, zooming does not",
+      body: `<p>The performance test was run on tonight's first build itself (v0.5b): a busy region in 1905, 1965 and 2030, full screen at 3440 \u00D7 1440 on Ultra with the interface on.</p>
+      <p><b>The graphics card now fits 60 frames a second at full resolution in every steady view</b>: 10.6 to 15.2 ms a frame, where this morning it needed 17.5 to 21. Memory is inside the target (about 8 GB of video memory).</p>
+      <p>What holds the frame rate back is the game's own code: 16 to 18 ms in steady views, 24 ms while panning fast, and 38 to 61 ms while zooming in and out.</p>`,
+      chart: { type: "bars", title: "Frames a second in tonight's first build, by view (lowest measured across the three years)", goal: 60, max: 80, goalLabel: "60 frames a second: the target everywhere",
+        rows: [["Following a train", 69, "69 to 78"], ["Crowded platform", 64, "64 to 72"], ["Fully zoomed out", 59, "59 to 63"], ["Default view", 51, "51 to 67"], ["High street", 43, "43 to 64"], ["Panning fast", 41, "41 to 55"], ["Zoomed right in", 34, "34 to 70"], ["Zooming in and out", 14, "14 to 21"]] },
+      bad: `Zooming in and out runs at 14 to 21 frames a second, and fast panning at 41 to 55. Under 48 a FreeSync monitor like yours can lose the picture, and the frame-rate keeper cannot help here because the graphics card is not the limit. Zooming and panning are now the first performance target. A second set of fixes (ground cover from 13.5 ms to 0.1 ms, steam halved) is in tonight's second build.` },
+
     { time: "19:06", tags: ["Building"], title: "Try this: the new building tools in five steps",
       body: `<p>For tonight's build. Rail mode is <b>Y</b>, the track tool is <b>1</b>.</p>
       <ul><li><b>1. Look before you press.</b> Move the pointer over a hillside: thin dark contour lines show the land's height round it, and the ends of your own track show small warm rings where a drag would continue the line.</li>
