@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:44",
+  updated: "15 Nov, 17:52",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
@@ -26,6 +26,17 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "17:51", tags: ["World", "Colour"], title: "36 new buildings, from 1850 to 2050",
+      body: `<p>The buildings that make a town a town now cover every era, with roofs in slate, red and brown tile, glass, copper, zinc, planted roofs and solar panels:</p>
+      <ul><li><b>1850 to 1917:</b> town hall, market hall, chapel, board school, bank, quay warehouse, brewery, cemetery, football ground, bandstand, villa, mansion flats, almshouses, station hotel, post office, library, police station, cottage hospital. These stay standing in every later year.</li>
+      <li><b>1918 to 1949:</b> a roadhouse pub, fire station, department store, lido, county school.</li>
+      <li><b>1950 to 1989:</b> an estate pub, an A-frame church, swimming baths with a folded roof, a system-built school, a light-industrial unit, a health centre.</li>
+      <li><b>1990 to 2029:</b> a retail shed with its car park, a business-park office, a leisure centre, a school.</li>
+      <li><b>2030 on:</b> a vertical farm, a data hall, a library.</li></ul>
+      <p>The map already places the first of them: chapels and schools in the districts, banks on corners, market halls on squares, warehouses at the quays, breweries and the cemetery at the edge of town. Thirty-six invented names are being lettered onto them.</p>`,
+      figs: [["civic_all_eras_sheet.jpg", "24 of the 36, from the game camera (artist's previews on a plain backdrop)"]], stack: true,
+      bad: `They still read too clean; the weathered check on real ground beside the houses is next, then the game. The 1960s estate pub and the health centre are plain boxes: true to their time, but weak as landmarks.` },
+
     { time: "17:42", tags: ["Performance"], title: "What Ultra will be: full sharpness, lighter lighting",
       body: `<p>The same view at 3440 \u00D7 1440 lit two ways: ray-traced on top, the lighter method below. Over the town, from 900 m and over the sea they cannot be told apart beyond a hair of shadow softness, and the lighter method saves <b>3 to 4 ms a frame</b> and about 2 GB of video memory. (A first estimate of 6 to 8 ms was too high; this is the measured figure.)</p>
       <p>A second comparison, of full resolution against 75 % and 67 % with upscaling, showed the opposite: full resolution is visibly crisper on window frames and fences. So Ultra becomes <b>full resolution with the lighter lighting</b>, and the frame-rate keeper lowers resolution only in the moments the graphics card falls behind, never under 60 %. Ray tracing stays available as a switch.</p>`,
