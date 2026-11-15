@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 18:16",
+  updated: "15 Nov, 18:50",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -12,7 +12,7 @@ window.JOURNAL = {
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
-      status: "Eight-direction roads, curves, road bridges and jitter-free junctions are in the simulation. Traffic is rewritten. Not on screen yet." },
+      status: "The traffic rewrite is in the game: lanes kept, weight in braking, junctions that clear. The surfaces that draw diagonal and curved roads are still being rebuilt, so roads still zigzag on screen." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
       status: "Four looks captured in the game for you to choose. New brick, roofs and per-building paint are made and wait for the next art import." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
@@ -26,6 +26,10 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "18:50", tags: ["Roads"], title: "The traffic rewrite is in, the new road surfaces are not yet",
+      body: `<p>The rewritten town traffic is merged and seen in the game on the 32 km region: vehicles keep their lanes, brake and pull away with weight for their type, trailers follow round turns, parked cars pull out and park again, and there are brake lights and indicators. <b>Junctions no longer knot</b>: v0.4 had eight vehicles locked in one junction; now they clear and move. The rewrite also halved the cost of traffic and removed the stutter each time a town laid a road.</p>`,
+      bad: `The fix for the zigzag itself is not in tonight's build. Roads in eight directions exist in the simulation, but the new road surfaces that draw them failed twice (they drew nothing, and cost far too much) and are being rebuilt; until they land the screen still shows v0.4's road pieces, so diagonal roads still look like staircases. With the old pieces, town cars turn back at road bridges over water. Motorways are drawn in code but not seen yet, and the film following a lorry through town, country and motorway has not been made.` },
+
     { time: "18:09", tags: ["Building"], title: "The track preview is solid now, at the camera you play at",
       body: `<p>The wireframe is gone. From the default camera at 3440 \u00D7 1440, a drag of track now shows a <b>stone-grey ballast bed with rails</b> about twenty pixels wide (v0.4's was a hairline), earth slopes for embankments and cuttings, a deck on piers for a bridge, and a darkened hill with a stone portal for a tunnel. Roads preview as an asphalt band with kerbs, curving in arcs. Labels appear only on the big structures; one summary at the pointer gives length, climb, steepest gradient and the fix key when something is in the way.</p>
       <p>Being added now: bridges and tunnel mouths drawn with the very pieces the finished railway uses.</p>`,
