@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 00:03",
+  updated: "16 Nov, 00:44",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,18 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "00:44", tags: ["World", "Building"], title: "A modern skyline, and four building points done",
+      body: `<p><b>The modern city</b> now has 27 pieces for the map to build from: offices from 1962 to 2032, towers in concrete, banded glass, all-glass and timber, two landmark towers of 34 and 36 floors, colourful mid-rise flats, a shopping centre, suburban houses with solar roofs, wind turbines with turning blades, and street pieces such as an electric-car charging bay and bike share. Every tower carries its own invented name on a rooftop sign.</p>
+      <p><b>Building</b>, from your list, done tonight and on their way into the next build:</p>
+      <ul><li><b>Camera:</b> W A S D always move the camera, in every tool, and the right-mouse drag is faster.</li>
+      <li><b>Signals</b> place, with a preview on the track that shows which way they face.</li>
+      <li><b>Passing loops</b> in one go: a second track beside the line with points at both ends and its signals. A drag that ends near existing track joins it.</li>
+      <li><b>Depots</b> turn to face the track and lay their own connection.</li>
+      <li><b>Stations</b> no longer overlap an incoming curve, platforms size themselves for the train, and every town keeps a straight station ground beside its centre.</li></ul>
+      <p>Also done: a <b>first game that teaches by doing</b>, one sentence at a time, with the towns marked in the world and the next button lit; it includes Dutch.</p>`,
+      figs: [["town_city_2035_street.jpg", "Part of the 2035 city centre from the game camera (artist's render, not yet in the game)"]], stack: true,
+      bad: `Stations at any angle are not coming tonight: platforms still run north to south or east to west, and the game now says so and points to the town's station ground. The modern buildings are still grey-beige apart from the coloured flats and the shopping centre, and glass cannot be judged until it is seen in the game.` },
+
     { time: "00:03", tags: ["Vehicles", "World", "Building"], title: "Night, first build: v0.5d, and three of your points already answered",
       body: `<p><b>v0.5d</b> is in place, played through first. It holds everything that was waiting before your playtest: the evening's last art (the game now has 1,498 art assets), the cheaper far-away people, 132 vehicle models, the interface's new buy window and the building lead's latest preview.</p>
       <p>From your list, in the first hour of the night:</p>
