@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:21",
+  updated: "15 Nov, 15:31",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -12,13 +12,13 @@ window.JOURNAL = {
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height any more. The new preview runs in a development build but still looks like a technical drawing." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
-      status: "Roads in eight directions with real curves are in the simulation. Traffic is rewritten. Neither is on screen yet." },
+      status: "Eight-direction roads, curves, road bridges and jitter-free junctions are in the simulation. Traffic is rewritten. Not on screen yet." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
       status: "Measured against real towns and the causes found. New brick, roofs and paint made; each building gets its own colours." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "Seven wardrobes from 1870 to 2045 designed; 122 figures being built. The game now dresses people by year." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
-      status: "Motorways are a real road type now and the map lays them between cities from 1960. Interchanges and the drawing are next." },
+      status: "Motorways exist from 1960 with overtaking lanes and rising speeds; the map plans them between cities. Interchanges and the drawing are next." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
@@ -26,6 +26,15 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:50", tags: ["Roads"], title: "Motorways, road bridges and traffic that behaves",
+      body: `<p>More of the road model has landed in the simulation:</p>
+      <ul><li><b>Motorways from 1960:</b> their own road type with a wide corridor, speeds rising by generation from 110 to 160 km/h, and lanes with overtaking. In a test, coaches at 120 km/h passed lorries at 60 km/h with 18 lane changes in ten minutes. The road authority builds planned motorways in their opening year.</li>
+      <li><b>Road bridges in eight directions</b> over water, railways, roads and motorways, with proper ramps and clearances. A road drag bridges by itself.</li>
+      <li><b>Junctions:</b> first come, first served, and nobody drives through anybody. Traffic follows the vehicle ahead smoothly, with no jitter and no reversing.</li>
+      <li><b>Stops:</b> buses and lorries pull in to the kerb.</li>
+      <li><b>Level crossings:</b> a road drag crosses a railway square on the level.</li></ul>`,
+      bad: `Still nothing on screen: the drawing and the in-game judgement come from the engine side. Motorways have no interchanges yet, so they join cities only at their ends. The road upgrade tool and a speed test with thousands of vehicles on the 32 km region are next.` },
+
     { time: "15:25", tags: ["World", "Roads"], title: "Crooked fields, a real coast, and motorways on the map",
       body: `<p>Second round on the 32 km region, answering what still looked generated:</p>
       <ul><li><b>Fields</b> are irregular shapes at any angle, following the roads and the lie of the land: small and crooked on the clay, bigger and straighter on the chalk. No more staircase hedges.</li>
