@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:51",
+  updated: "15 Nov, 15:59",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -14,7 +14,7 @@ window.JOURNAL = {
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
       status: "Eight-direction roads, curves, road bridges and jitter-free junctions are in the simulation. Traffic is rewritten. Not on screen yet." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
-      status: "Measured against real towns and the causes found. New brick, roofs and paint made; each building gets its own colours." },
+      status: "Four looks captured in the game for you to choose. New brick, roofs and per-building paint are made and wait for the next art import." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "Seven wardrobes from 1870 to 2045 designed; 122 figures being built. The game now dresses people by year." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
@@ -26,6 +26,16 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:59", tags: ["Colour"], title: "Four looks to choose from, in the game",
+      body: `<p>The first pictures from the game itself: the same 1965 town at the same moment, at 3440 × 1440, in four looks.</p>
+      <ul><li><b>A, as shipped in v0.4:</b> a milky beige veil over everything and a khaki tint.</li>
+      <li><b>B, clear afternoon:</b> a third of the haze, natural saturation and white balance, stronger cloud shadows, leaves in their own green.</li>
+      <li><b>C, golden afternoon:</b> the warm sun kept, half the haze, a touch more colour.</li>
+      <li><b>D, crisp:</b> almost no veil, a whiter sun, more saturation. The edge of what still reads as a photograph.</li></ul>
+      <p>Measured, grey pixels fall from 59 % of the frame in A to 52 % in B and C and 39 % in D. The colour director's pick is <b>B</b>: it removes the veil without looking processed, and the light stays warm because the sun is warm, not the camera. B is set as the default; C is three numbers away if you prefer it.</p>`,
+      figs: [["colour_looks_1965_town.jpg", "Top: A as shipped, B clear afternoon. Bottom: C golden afternoon, D crisp"]], stack: true,
+      bad: `The look is the smaller part of the problem. These pictures still show v0.4's buildings: grey-brown walls under grey roofs. The new brick, tiles, slate and per-building paint reach the game with the next art import, and the same view will be captured again then. The 1905 comparison is still to come.` },
+
     { time: "15:51", tags: ["Vehicles", "Variety"], title: "Lorries that carry what they carry",
       body: `<p>In v0.4 one flatbed stood in for every cargo. The 1932 lorry is rebuilt on a proper coach-built cab (radiator shell, louvred bonnet, swept wings, glass set back in its frames) and now comes as a <b>tipper with a coal or ore heap, a sheeted bulk body, a tanker, a timber lorry with its logs, and a box van</b> in six sign-written trades. The 1972 and 2000 articulated lorries have rebuilt tractors and five cargo trailers each, with hauliers' names on the sides.</p>
       <p>Written and waiting to be rendered: an eight-wheeler, a 1912 lorry and mail van, 1962 and 1985 lorries, a 1925 single-deck bus, 1952 and 1988 coaches, a charabanc, a bendy bus, electric buses and lorries, the 2045 driverless set, cars for the 1930s, 1955, 1984, 2025 and 2040, and three horse-drawn vehicles.</p>`,
