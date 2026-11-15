@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 23:34",
+  updated: "15 Nov, 23:41",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "23:41", tags: ["Name and logo"], title: "Ten names to choose from, first logos",
+      body: `<p>You said you hate the name Waybill and love a good logo. Ten candidates, ranked by the image maker, each checked on the web against existing games and companies: <b>Viaduct, Marlvale, Ferrovale, Permanent Way, Eraline, Waymark, Throughline, Common Carrier, Hinterline, Tessel</b>. Eight more were thrown out while checking because they are taken or too close to something that exists.</p>
+      <p>The choice is yours. Whichever you pick needs a proper trademark search before it goes public; the web check is not that.</p>`,
+      figs: [["names_logos.jpg", "The ten names with a first logo each, on light and dark, with an app icon"]], stack: true,
+      bad: `These first logos are clean but read as software-company marks, not as the title of a game. A second round with bolder, more crafted treatments for the five best names is being made, along with main-menu pictures. The last one, Tessel, has a mark too close to a famous software logo.` },
+
     { time: "23:34", tags: ["Building", "Performance", "Colour"], title: "You played v0.5c: what you said, and the plan for the night",
       body: `<p><b>What you said.</b> The frame rate is much better. Building is more intuitive, but not great yet. And a long list of things that got in the way:</p>
       <ul><li><b>Controls:</b> W A S D fight the build tools, so the camera cannot move while building; tilting and panning with the right mouse button is slow; R for airport size clashes too; changing controls in Settings crashes the game.</li>
