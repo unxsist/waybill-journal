@@ -8,7 +8,7 @@ window.JOURNAL = {
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 1.5,
-      status: "Measured at your 3440 × 1440 for the first time. The game's own code is the limit, not the graphics card. Fixes under way." },
+      status: "First gain measured: a busy town went from 24 to 34 frames a second, the whole region from 15 to 28. Still half of the 60 target." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and routes round houses by itself. The new preview runs in a development build but still looks like a technical drawing." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "16:17", tags: ["Performance"], title: "First real gain: up to twice the frame rate",
+      body: `<p>On the same busy 1965 region and the same views as this morning's measurement, the first round of fixes is in. The stutters of up to a third of a second each time a town put up a building are <b>gone</b>, along with per-frame costs for building sites and ground cover. The game's own code went from 35 ms a frame to 26 ms.</p>
+      <p>Hedges, hedgerows and walls are now drawn in pieces round the camera straight from the map, in place of 700,000 separate objects.</p>`,
+      chart: { type: "bars", title: "Frames a second, busy 1965 region, 3440 \u00D7 1440 Ultra (development build)", goal: 60, max: 70, goalLabel: "60 frames a second: the target everywhere",
+        rows: [["Opening view", 33.6, "33.6 (was 25.8)"], ["In a town", 34.4, "34.4 (was 24.1)"], ["Whole region", 28.4, "28.4 (was 14.6)"], ["Following a train", 32.5, "32.5 (was 15.2)"]] },
+      bad: `Still half of the target. Every new town road is still a stutter of about a fifth of a second (the traffic rewrite removes it once it is judged in the game). Steady costs remain: traffic 7 to 8 ms, the interface 4 ms, steam about 4 ms, sound 2 ms. And preparing the picture for the graphics card now costs as much as the game's own code, with spikes of up to half a second: that is the next target.` },
+
     { time: "16:03", tags: ["World"], title: "The new region, seen in the game for the first time",
       body: `<p>The rebuilt 32 km region (in 1965) has now been looked at through the game camera, next to v0.4's.</p>
       <p>From height the land reads as <b>fields</b> at last: shapes at many angles, big on the downs and small by the villages, where v0.4 showed camouflage blotches. Towns have crooked cores and varied districts, and the port spans its estuary with quays.</p>`,
