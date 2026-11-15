@@ -26,7 +26,7 @@ window.JOURNAL = {
   ],
 
   entries: [
-    { time: "15:50", tags: ["Roads"], title: "Motorways, road bridges and traffic that behaves",
+    { time: "15:30", tags: ["Roads"], title: "Motorways, road bridges and traffic that behaves",
       body: `<p>More of the road model has landed in the simulation:</p>
       <ul><li><b>Motorways from 1960:</b> their own road type with a wide corridor, speeds rising by generation from 110 to 160 km/h, and lanes with overtaking. In a test, coaches at 120 km/h passed lorries at 60 km/h with 18 lane changes in ten minutes. The road authority builds planned motorways in their opening year.</li>
       <li><b>Road bridges in eight directions</b> over water, railways, roads and motorways, with proper ramps and clearances. A road drag bridges by itself.</li>
