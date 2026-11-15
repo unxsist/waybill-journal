@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:59",
+  updated: "15 Nov, 16:03",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "16:03", tags: ["World"], title: "The new region, seen in the game for the first time",
+      body: `<p>The rebuilt 32 km region (in 1965) has now been looked at through the game camera, next to v0.4's.</p>
+      <p>From height the land reads as <b>fields</b> at last: shapes at many angles, big on the downs and small by the villages, where v0.4 showed camouflage blotches. Towns have crooked cores and varied districts, and the port spans its estuary with quays.</p>`,
+      figs: [["world_before_v04_ingame_region.jpg", "Before, in the game: v0.4's land from height"], ["world_after_ingame_1965_region.jpg", "After, in the game: field shapes, but still brown and olive"], ["world_after_ingame_1965_city900.jpg", "After, in the game: a town district in 1965"]],
+      bad: `Honestly, a town still reads as generated. Blocks are hollow: rows of the same house round a big empty lawn, where real terrace districts are dense with yards and alleys. Whole districts use one building type. From height the land is still brown and olive, the fields meet in hard steps because hedges are not drawn yet, and the hills barely show. Being worked on: denser blocks with real parks, a mix of shops, pubs, churches, works and warehouses by street, hedges and field trees, greener and yellower crops, and the new clear look.` },
+
     { time: "15:59", tags: ["Colour"], title: "Four looks to choose from, in the game",
       body: `<p>The first pictures from the game itself: the same 1965 town at the same moment, at 3440 × 1440, in four looks.</p>
       <ul><li><b>A, as shipped in v0.4:</b> a milky beige veil over everything and a khaki tint.</li>
