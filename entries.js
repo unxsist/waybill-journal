@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 16:45",
+  updated: "15 Nov, 16:46",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["91", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "16:46", tags: ["World", "Colour"], title: "The buildings a town was missing",
+      body: `<p>Towns were whole districts of one terrace repeated. A new artist builds what makes a town a town, and the first ten are done for the Victorian era, so they stand in every later year too: a <b>town hall with a clock tower</b>, a market hall with a glass and slate roof, a chapel, a board school, a quay warehouse with hoists, a bank, a cemetery, a football ground, a bandstand and a brewery. The map places them where they belong: on the square, on corners, by the water, in the park, at the edge of town.</p>
+      <p>Next, era by era: a 1930s roadhouse pub, a department store, a lido, a 1960s estate pub and system-built school, swimming baths, a retail shed, a business-park office, a vertical farm, then villas, mansion flats and almshouses.</p>`,
+      figs: [["civic_1880_first_shapes.jpg", "First shapes: town hall, market hall, board school; below, the chapel, the quay warehouse and the market hall close up (artist's preview)"]], stack: true,
+      bad: `Too clean in these previews, and every roof is the same grey slate. They have not been weathered, lettered or seen in the game yet.` },
+
     { time: "16:45", tags: ["Building"], title: "Building over a hill: before and after, in the game",
       body: `<p>The same drag across the same 29 m escarpment at 3440 \u00D7 1440. In v0.4 (top) the preview looked flat and the strip said only \u201Cearthworks \u00A31,740\u201D. Now (bottom) the preview is <b>solid</b>: you see the 6 m embankment as earth and the stone viaduct on its piers, each with its label.</p>
       <p>Above the build bar a <b>side profile</b> shows how the line gets over the land: the ground, the embankment filled in, the viaduct's piers, and the height at each end, which Page Up and Page Down raise and lower. The strip says it in words: \u201CTrack 310 m \u00B7 level \u00B7 embankment 192 m, 6 m high \u00B7 bridge 88 m, 10 m high \u00B7 \u00A322,471\u201D. The height mode here is \u201CKeeps level\u201D (key E).</p>
