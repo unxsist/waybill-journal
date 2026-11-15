@@ -1,10 +1,10 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 20:50",
+  updated: "15 Nov, 21:55",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
-  note: "<b>Honest status:</b> v0.5b, the first build of this pass, is playable since this evening, with known faults (see the newest entries). v0.5c follows tonight with more performance, more art and the region as the default map. Many pictures below are still from development builds and artists' review renders.",
+  note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
@@ -26,6 +26,11 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "21:55", tags: ["Performance", "Building", "World"], title: "v0.5c is ready to play",
+      body: `<p>The second build of the evening is in place. Checked at 3440 \u00D7 1440 before hand-over: a new game opens on the <b>32 km region</b>, makes it behind the loading screen, and opens on its largest town in 1905: Victorian brick terraces, shops, chapels and civic buildings, with no modern towers and no white sheets. A line over a hill builds.</p>
+      <p>New over v0.5b: the big performance fix (steady views 72 to 77 frames a second, loading in 14 seconds), the zoom and pan fix (42 to 55 where there were 7 to 17), real bridges and tunnel mouths in the track preview, double track with signals in one drag (Q and R), and the propeller fix.</p>`,
+      bad: `Not in it: the evening's last art batch (the 36 landmark buildings with their names, the rebuilt 1905 people, later-era town colour, the newest trains, lorries and ships) and the cheaper far-away people, so crowds may cost frame rate; both come in v0.5d later tonight. Still true: the track preview is a pale band, straight lines cross the land while dragging, the road preview steps on gentle diagonals, town cars turn back at bridges over water, and roads still zigzag because the new road surfaces are off. Zooming was measured on the same code but not re-checked on this exact package.` },
+
     { time: "20:50", tags: ["Performance"], title: "Zooming: from 7 to 17 frames a second up to 42 to 55",
       body: `<p>The fix aimed at moving the camera is measured. Woods and hedges are now grown in the background a little at a time, the game releases less per frame, and the ground catches up within a smaller budget. On the busy 1965 region at 3440 \u00D7 1440:</p>`,
       chart: { type: "bars", title: "Frames a second while the camera moves (lowest measured)", goal: 60, max: 70, goalLabel: "60 frames a second: the target everywhere",
