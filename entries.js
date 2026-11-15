@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 23:48",
+  updated: "16 Nov, 00:03",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,15 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "00:03", tags: ["Vehicles", "World", "Building"], title: "Night, first build: v0.5d, and three of your points already answered",
+      body: `<p><b>v0.5d</b> is in place, played through first. It holds everything that was waiting before your playtest: the evening's last art (the game now has 1,498 art assets), the cheaper far-away people, 132 vehicle models, the interface's new buy window and the building lead's latest preview.</p>
+      <p>From your list, in the first hour of the night:</p>
+      <ul><li><b>\u201CSignals can't be placed at all\u201D:</b> the cause is found. The simulation accepted signals, but the click missed the rails on big curves, because curves are drawn smoothly and stored as steps. A signal is now picked against the track as drawn, faces the right way and says why when it cannot stand somewhere. It is being wired into the tool.</li>
+      <li><b>\u201CTrains look somewhat transparent\u201D:</b> moving vehicles were smearing because the picture-sharpening step did not know they were moving. Fixed for ships, aircraft and road vehicles; trains follow.</li>
+      <li><b>\u201CA beautiful core of modern offices and suburbs around it\u201D:</b> from the late 1950s a city's centre is now rebuilt block by block into offices and towers, tallest in the middle: 80 tall buildings on the test region in 1965, 221 in 1995, 304 in 2030. Twenty new modern buildings are made for it: offices, glass and timber towers, coloured flats, a shopping centre, solar-roofed houses, wind turbines.</li>
+      <li><b>\u201CHard to line up stations\u201D:</b> every city, town and village now keeps a level strip beside its centre for a station, on the same heading as its high street, with room for the track to arrive.</li></ul>`,
+      bad: `None of these four is in v0.5d itself; they land in the next builds tonight. In the play-through a first train reached its town but did not visibly earn before the year's end; that is being looked into now.` },
+
     { time: "23:47", tags: ["Name and logo"], title: "Logos, second round: game titles over the menu picture",
       body: `<p>The second round treats the five best names as game titles, each shown over a main-menu picture with its small icon. The image maker's own order, best first: <b>Viaduct B</b> (bronze capitals under three rising arches with a lamp), <b>Ferrovale A</b> (rails running into a green vale), <b>Marlvale B</b> (gold script with a vale and sunrise), <b>Ferrovale B</b> (a signal with a sunrise lamp).</p>
       <p>These are direction art: the one you choose gets redrawn cleanly, and the menu pictures get remade from the game itself.</p>`,
