@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 16:24",
+  updated: "15 Nov, 16:29",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["91", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "16:29", tags: ["Water"], title: "Canals hold water",
+      body: `<p>In v0.4 a canal you dug was a brown cut with no water. The cause is found and fixed, and seen in the game: the game softens every shoreline, and water only one tile wide was softened away to dry land, so the ground was never cut and the water lay hidden under it. Narrow water now keeps its depth; wide rivers keep their rounded banks.</p>
+      <p>Also on the way for ships: empty vessels ride high, the load you see matches the cargo, sails set and furl, and the horse towing a narrowboat walks the towpath.</p>`,
+      figs: [["canal_dry_before_water_after.jpg", "The same canal in the game: v0.4's dry cut on the left, water between the stone edges on the right"]], stack: true,
+      bad: `A field tree is left standing on the new canal's towpath: things beside a dug canal are not cleared yet. Loaded and empty barges and an aircraft taking off have not been captured in the game yet.` },
+
     { time: "16:24", tags: ["Variety"], title: "91 models to choose from, up from 70",
       body: `<p>The third batch of the new line-up is in the game's data:</p>
       <ul><li><b>Rail:</b> a mixed-traffic 4-6-0 and a heavy freight 2-8-0 join the steam engines.</li>
