@@ -1,14 +1,14 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 20:29",
+  updated: "15 Nov, 20:50",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5b, the first build of this pass, is playable since this evening, with known faults (see the newest entries). v0.5c follows tonight with more performance, more art and the region as the default map. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
-      status: "Measured on tonight\u2019s build: 51 to 78 frames a second in steady views (15 to 26 this morning), and the graphics card passes everywhere. Zooming still drops to 14 to 21; that is the next target." },
+      status: "Steady views 72 to 77 frames a second (15 to 26 this morning), loading in 14 seconds, zooming 42 to 55 (7 to 17 in the first build). Left: the last frames under 60 while the camera moves, and the fastest game speed." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "20:50", tags: ["Performance"], title: "Zooming: from 7 to 17 frames a second up to 42 to 55",
+      body: `<p>The fix aimed at moving the camera is measured. Woods and hedges are now grown in the background a little at a time, the game releases less per frame, and the ground catches up within a smaller budget. On the busy 1965 region at 3440 \u00D7 1440:</p>`,
+      chart: { type: "bars", title: "Frames a second while the camera moves (lowest measured)", goal: 60, max: 70, goalLabel: "60 frames a second: the target everywhere",
+        rows: [["Zooming, first build", 7, "7 to 17"], ["Zooming, with the fix", 42, "42 to 55"], ["Panning fast, first build", 11, "11 to 16"], ["Panning fast, with the fix", 46, "46 to 57"]] },
+      bad: `Still short of 60 while the camera moves: rebuilding the ground costs 4.6 ms a frame while zooming, the railway 4.6 ms, steam 2.8 ms, and preparing the picture for the graphics card still spikes. The fastest game speed is not fixed yet.` },
+
     { time: "20:29", tags: ["Performance", "Building"], title: "v0.5b is ready to play",
       body: `<p>The first build of the pass that you can play is in place. It was played through at 3440 \u00D7 1440 before hand-over: the new building tools work (the strip, the side profile, the steepest gradient flagged, prices; a line over a hill; a road with a bus stop, a lorry bay and a depot), platforms and a depot were built, and the performance test was run on it.</p>
       <p><b>Play the 4 km county, not the region, in this build.</b></p>`,
