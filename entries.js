@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 00:44",
+  updated: "16 Nov, 00:58",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,15 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "00:58", tags: ["Interface"], title: "Three directions for the interface, for you to choose",
+      body: `<p>You said the interface is confusing and needs a complete revisit. Twelve things wrong today were written down after playing it, and three directions were drawn for the whole interface, each at 3440 \u00D7 1440 over a real frame of the game, in the same four moments: a calm game, building a line, a train's window, the new-game screen.</p>
+      <ul><li><b>A, a dock on the left</b> with a docked inspector: tools and windows live at the left edge, and what you select opens in one fixed place instead of floating windows.</li>
+      <li><b>B, one bar at the bottom</b> with sheets that rise from it: everything starts from a single bar, and the screen is otherwise empty.</li>
+      <li><b>C, menus with words</b> along the top and a tool palette: every menu is labelled in words rather than icons.</li></ul>
+      <p>The designer's pick is <b>A</b>, with B's plainer new-game screen and C's word labels shown on hover. Open the pictures full size to compare; each direction also has a calm view and a new-game screen.</p>`,
+      figs: [["ui_direction_a_build.jpg", "A: building a line"], ["ui_direction_a_train.jpg", "A: a train's window"], ["ui_direction_b_build.jpg", "B: building a line"], ["ui_direction_b_train.jpg", "B: a train's window"], ["ui_direction_c_build.jpg", "C: building a line"], ["ui_direction_c_train.jpg", "C: a train's window"]],
+      bad: `These are pictures, not the game: none of it is built. They show no track preview while building, the live view of the train is soft, and there is no mini-map in them yet. Whichever you choose gets built in the next run.` },
+
     { time: "00:44", tags: ["World", "Building"], title: "A modern skyline, and four building points done",
       body: `<p><b>The modern city</b> now has 27 pieces for the map to build from: offices from 1962 to 2032, towers in concrete, banded glass, all-glass and timber, two landmark towers of 34 and 36 floors, colourful mid-rise flats, a shopping centre, suburban houses with solar roofs, wind turbines with turning blades, and street pieces such as an electric-car charging bay and bike share. Every tower carries its own invented name on a rooftop sign.</p>
       <p><b>Building</b>, from your list, done tonight and on their way into the next build:</p>
