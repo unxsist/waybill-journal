@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 23:41",
+  updated: "15 Nov, 23:48",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "23:47", tags: ["Name and logo"], title: "Logos, second round: game titles over the menu picture",
+      body: `<p>The second round treats the five best names as game titles, each shown over a main-menu picture with its small icon. The image maker's own order, best first: <b>Viaduct B</b> (bronze capitals under three rising arches with a lamp), <b>Ferrovale A</b> (rails running into a green vale), <b>Marlvale B</b> (gold script with a vale and sunrise), <b>Ferrovale B</b> (a signal with a sunrise lamp).</p>
+      <p>These are direction art: the one you choose gets redrawn cleanly, and the menu pictures get remade from the game itself.</p>`,
+      figs: [["names_logos_round2.jpg", "Ten title treatments for five names, over a menu picture, with the small icon"]], stack: true,
+      bad: `Viaduct A reads as \u201CWiaduct\u201D. Marlvale A and Permanent Way B look like mobile-game titles. Ferrovale A's bevel is too heavy, and Marlvale B leans towards a wine label. The background pictures are generated illustrations, not the game.` },
+
     { time: "23:41", tags: ["Name and logo"], title: "Ten names to choose from, first logos",
       body: `<p>You said you hate the name Waybill and love a good logo. Ten candidates, ranked by the image maker, each checked on the web against existing games and companies: <b>Viaduct, Marlvale, Ferrovale, Permanent Way, Eraline, Waymark, Throughline, Common Carrier, Hinterline, Tessel</b>. Eight more were thrown out while checking because they are taken or too close to something that exists.</p>
       <p>The choice is yours. Whichever you pick needs a proper trademark search before it goes public; the web check is not that.</p>`,
