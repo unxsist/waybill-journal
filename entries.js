@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:42",
+  updated: "15 Nov, 17:44",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -27,10 +27,12 @@ window.JOURNAL = {
 
   entries: [
     { time: "17:42", tags: ["Performance"], title: "What Ultra will be: full sharpness, lighter lighting",
-      body: `<p>The same view at 3440 \u00D7 1440 lit two ways: ray-traced on top, the lighter method below. Over the town, from 900 m and over the sea they cannot be told apart beyond a hair of shadow softness, and the lighter method saves <b>6 to 8 ms a frame</b> and about 2 GB of video memory.</p>
+      body: `<p>The same view at 3440 \u00D7 1440 lit two ways: ray-traced on top, the lighter method below. Over the town, from 900 m and over the sea they cannot be told apart beyond a hair of shadow softness, and the lighter method saves <b>3 to 4 ms a frame</b> and about 2 GB of video memory. (A first estimate of 6 to 8 ms was too high; this is the measured figure.)</p>
       <p>A second comparison, of full resolution against 75 % and 67 % with upscaling, showed the opposite: full resolution is visibly crisper on window frames and fences. So Ultra becomes <b>full resolution with the lighter lighting</b>, and the frame-rate keeper lowers resolution only in the moments the graphics card falls behind, never under 60 %. Ray tracing stays available as a switch.</p>`,
       figs: [["perf_light_hw_top_sw_bottom_close.jpg", "Top: ray-traced lighting. Bottom: the lighter method. Same moment, same view"]], stack: true,
-      bad: `The expected result (the graphics card at 11 to 14 ms a frame on Ultra at full resolution, well inside the 60 target) and the frame-rate keeper are built but not measured yet; numbers follow within the hour.` },
+      chart: { type: "bars", title: "The new Ultra: graphics card time per frame at full resolution (milliseconds; lower is better)", goal: 16.7, max: 24, lower: true, goalLabel: "16.7 ms: the budget for 60 frames a second",
+        rows: [["Zoomed in", 13.7, "13.7 (was 17.5)"], ["From 900 m", 14.8, "14.8 (was 18.5)"], ["While zooming", 15.5, "15.5"], ["Fully zoomed out", 17.1, "17.1 (was 20.5)"]] },
+      bad: `Fully zoomed out, the graphics card is still just over budget; there the frame-rate keeper lowers resolution to about 90 %. The keeper itself is built but not yet measured. Next on the graphics card: the ground and the shadows.` },
 
     { time: "17:33", tags: ["People"], title: "Eight eras of people, all built",
       body: `<p>All <b>122 figures</b> are built and exported: sets for 1870, 1930, 1955, 1972, 1992, 2015 and 2045, each with men, women, children, old people, travellers, seated figures and a parent with a pram, plus railway staff and workers for three eras. The picture shows the same street scene in all eight eras from the game's distance: dark long skirts in 1870, straw hats in 1905, trilbies and long coats in 1930, pastels in 1955, rust, mustard and denim in 1972, bright jackets and backpacks in 1992, dark puffer coats and wheeled cases in 2015, sand, sage and white in 2045.</p>
