@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 16:29",
+  updated: "15 Nov, 16:45",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["91", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -10,7 +10,7 @@ window.JOURNAL = {
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 1.5,
       status: "First gain measured: a busy town went from 24 to 34 frames a second, the whole region from 15 to 28. Still half of the 60 target." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
-      status: "Track is never refused for height and routes round houses by itself. The new preview runs in a development build but still looks like a technical drawing." },
+      status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
       status: "Eight-direction roads, curves, road bridges and jitter-free junctions are in the simulation. Traffic is rewritten. Not on screen yet." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "16:45", tags: ["Building"], title: "Building over a hill: before and after, in the game",
+      body: `<p>The same drag across the same 29 m escarpment at 3440 \u00D7 1440. In v0.4 (top) the preview looked flat and the strip said only \u201Cearthworks \u00A31,740\u201D. Now (bottom) the preview is <b>solid</b>: you see the 6 m embankment as earth and the stone viaduct on its piers, each with its label.</p>
+      <p>Above the build bar a <b>side profile</b> shows how the line gets over the land: the ground, the embankment filled in, the viaduct's piers, and the height at each end, which Page Up and Page Down raise and lower. The strip says it in words: \u201CTrack 310 m \u00B7 level \u00B7 embankment 192 m, 6 m high \u00B7 bridge 88 m, 10 m high \u00B7 \u00A322,471\u201D. The height mode here is \u201CKeeps level\u201D (key E).</p>
+      <p>Also seen in the game for the first time: the loading screen with a picture of the era and a moving bar, and the setting that holds your monitor's refresh by scaling resolution, with a live read-out.</p>`,
+      figs: [["interface_build_before_after.jpg", "Top: v0.4. Bottom: the same drag now, with the solid preview, the labels and the side profile above the build bar"]], stack: true,
+      bad: `Found in this first look and fixed in the build compiling now: Escape during a drag put the tool away instead of dropping the drag, the profile drew the line dashed on plain ground, the loading text was too small at this resolution, and some hints overran their controls. The embankment still reads as a flat tan band more than a bank with slopes. Not merged yet.` },
+
     { time: "16:29", tags: ["Water"], title: "Canals hold water",
       body: `<p>In v0.4 a canal you dug was a brown cut with no water. The cause is found and fixed, and seen in the game: the game softens every shoreline, and water only one tile wide was softened away to dry land, so the ground was never cut and the water lay hidden under it. Narrow water now keeps its depth; wide rivers keep their rounded banks.</p>
       <p>Also on the way for ships: empty vessels ride high, the load you see matches the cargo, sails set and furl, and the horse towing a narrowboat walks the towpath.</p>`,
