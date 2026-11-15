@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 20:10",
+  updated: "15 Nov, 20:14",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,15 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "20:14", tags: ["Performance"], title: "Honest numbers for tonight's first build: moving the camera is still slow",
+      body: `<p>A second, stricter test of tonight's first build on the busy 1965 region confirms the steady views (61 to 73 frames a second for the opening view, the biggest town and the whole region) and shows where it still fails:</p>
+      <ul><li><b>Zooming</b> from close up to the whole region and back: 7 to 17 frames a second.</li>
+      <li><b>Panning fast</b>: 10 to 16.</li>
+      <li><b>A crowded platform and a high street</b>: 47 to 51, with hitches.</li>
+      <li><b>The fastest game speed</b>: 8 frames a second, with one freeze of over eleven seconds.</li></ul>
+      <p>So in the first build you will feel zooming, panning and the fastest speed. The second build tonight carries the fix that halves the game's own cost in steady views and cuts loading to 14 seconds. A further fix aimed at zooming and panning (woods and hedges grown in the background, less work per frame while the camera moves) is written and being measured.</p>`,
+      bad: `Zooming, fast panning and the fastest game speed are not fixed in either of tonight's builds unless the zoom fix is measured in time. The eleven-second freeze at fastest speed is being traced to the signals.` },
+
     { time: "20:10", tags: ["Variety"], title: "132 models: the line-up is nearly all built",
       body: `<p>For tonight's second build the line-up reaches <b>132 models on 159 different bodies</b>; this morning it was 70 on 78. New in this batch:</p>
       <ul><li><b>Rail:</b> a shunter, a heavy diesel, a railcar, an electric unit, an intercity coach and a mail van.</li>
