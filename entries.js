@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:29",
+  updated: "15 Nov, 17:33",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -16,7 +16,7 @@ window.JOURNAL = {
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
       status: "Four looks captured in the game for you to choose. New brick, roofs and per-building paint are made and wait for the next art import." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
-      status: "Seven wardrobes from 1870 to 2045 designed; 122 figures being built. The game now dresses people by year." },
+      status: "All 122 figures for seven new eras are built and the game dresses people by year. They reach the game with the next art import." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
       status: "Motorways from 1960 with overtaking lanes, rising speeds and diamond interchanges are in the simulation, and roads upgrade in place. The drawing is next." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "17:33", tags: ["People"], title: "Eight eras of people, all built",
+      body: `<p>All <b>122 figures</b> are built and exported: sets for 1870, 1930, 1955, 1972, 1992, 2015 and 2045, each with men, women, children, old people, travellers, seated figures and a parent with a pram, plus railway staff and workers for three eras. The picture shows the same street scene in all eight eras from the game's distance: dark long skirts in 1870, straw hats in 1905, trilbies and long coats in 1930, pastels in 1955, rust, mustard and denim in 1972, bright jackets and backpacks in 1992, dark puffer coats and wheeled cases in 2015, sand, sage and white in 2045.</p>
+      <p>The game's side is merged: it dresses each person by the year, keeps some older people in the previous era's clothes, and gives a share of adults a pram.</p>`,
+      figs: [["people_eras_far.jpg", "The same street scene in eight eras, from the game's distance (artist's render)"]], stack: true,
+      bad: `Not yet seen in the game; that follows the art import. Each person still has one fixed colour scheme (variety per person is waiting on the paint system). The far-away, cheaper versions of the figures would not import, so for now every person is drawn at full detail, which must be solved before crowds cost frame rate. The 1905 figures are the old ones, without the new creases and hair.` },
+
     { time: "17:29", tags: ["Performance"], title: "From 15 to 56 frames a second",
       body: `<p>With the second round of fixes and the rewritten traffic together, on the new busy 1965 region at 3440 \u00D7 1440 on Ultra, the game runs at <b>52 to 56 frames a second</b> in every view. This morning the same views ran at 15 to 26.</p>
       <ul><li><b>Towns laying roads no longer stutter at all.</b> That was the biggest hitch left.</li>
