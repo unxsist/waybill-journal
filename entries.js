@@ -1,14 +1,14 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:21",
+  updated: "15 Nov, 17:29",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
-    { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 1.5,
-      status: "First gain measured: a busy town went from 24 to 34 frames a second, the whole region from 15 to 28. Still half of the 60 target." },
+    { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
+      status: "52 to 56 frames a second in every view of a busy region, up from 15 to 26 this morning. Left: the last stutters, the fastest speed and loading." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,16 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "17:29", tags: ["Performance"], title: "From 15 to 56 frames a second",
+      body: `<p>With the second round of fixes and the rewritten traffic together, on the new busy 1965 region at 3440 \u00D7 1440 on Ultra, the game runs at <b>52 to 56 frames a second</b> in every view. This morning the same views ran at 15 to 26.</p>
+      <ul><li><b>Towns laying roads no longer stutter at all.</b> That was the biggest hitch left.</li>
+      <li>The game's own code is down to 14 to 18 ms a frame (35 to 57 this morning); the graphics card 13 to 16 ms.</li>
+      <li>Memory is back inside the target: 6.2 GB of memory and 8.9 GB of video memory.</li>
+      <li>Hedges drawn from the map are confirmed in the game.</li></ul>`,
+      chart: { type: "bars", title: "Frames a second, busy 1965 region, 3440 \u00D7 1440 Ultra (development build)", goal: 60, max: 70, goalLabel: "60 frames a second: the target everywhere",
+        rows: [["Opening view", 56, "56 (this morning 25.8)"], ["Biggest town", 54, "54 (24.1)"], ["Whole region", 56, "56 (14.6)"], ["Following a train", 52, "52 (15.2)"]] },
+      bad: `Still short of the target. About one frame in a hundred takes 33 to 37 ms: steam at 4.5 ms, the interface at 4 ms with spikes of 20 ms, ground cover while following something fast. The fastest game speed runs at 19 frames a second. Loading still freezes the window for 37 seconds until the new loading screen is merged. These numbers are from two branches that still have to be merged.` },
+
     { time: "17:21", tags: ["Vehicles", "Variety"], title: "Nine new steam engines and seven new aircraft",
       body: `<p><b>Steam:</b> nine engines from the kit, each shown beside the locomotive you praised (the green one behind): an 1850 express single in red, an 1852 mixed-traffic engine, an 1865 passenger engine, an 1878 goods engine, a 1906 mixed-traffic 4-6-0, a 1911 heavy freight 2-8-0, a 1922 express in maroon, a 1946 mixed-traffic engine and a 1954 heavy freight 2-10-0. Also built: the first diesel, a 1932 electric unit, an intercity coach (so locomotive-hauled trains exist after 2025), a mail van, and container wagons in four shipping lines' colours.</p>
       <p><b>Air:</b> all thirteen aircraft are exported, each in two company colours. The seven new ones: a 1928 trimotor, a 1947 propeller airliner, a 1962 commuter turboprop, a 1971 jumbo, a 1989 narrowbody, a 1996 regional jet and a 2038 electric commuter. The 2042 aircraft is rebuilt.</p>`,
