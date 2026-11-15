@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 19:45",
+  updated: "15 Nov, 20:03",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "20:03", tags: ["Performance"], title: "For tonight's second build: 72 to 77 frames a second, loading in 14 seconds",
+      body: `<p>One more cause found, and it was everywhere: every time the game asked how high the land is at some spot, it walked through every levelled site on the map. The ground, the ground cover and the loading all paid for it. With that gone, in the busy 1965 views the game's own code takes <b>7.5 to 9.7 ms a frame</b> (16 to 18 in tonight's first build), which gives <b>72 to 77 frames a second</b>, and loading a region falls from about 40 seconds to <b>14</b>.</p>`,
+      chart: { type: "bars", title: "Loading a busy region (seconds; lower is better)", goal: 15, max: 45, lower: true, goalLabel: "15 seconds",
+        rows: [["This morning", 38, "38 s, window frozen"], ["Tonight's first build", 40, "37 to 44 s"], ["Tonight's second build", 14, "14 s"]] },
+      bad: `Zooming and fast panning have not been measured with this change yet. They load exactly the work that just became cheap, so they should improve a lot, but that is an expectation until the number is in.` },
+
     { time: "19:45", tags: ["Performance"], title: "Tonight's build, measured: the graphics card passes, zooming does not",
       body: `<p>The performance test was run on tonight's first build itself (v0.5b): a busy region in 1905, 1965 and 2030, full screen at 3440 \u00D7 1440 on Ultra with the interface on.</p>
       <p><b>The graphics card now fits 60 frames a second at full resolution in every steady view</b>: 10.6 to 15.2 ms a frame, where this morning it needed 17.5 to 21. Memory is inside the target (about 8 GB of video memory).</p>
