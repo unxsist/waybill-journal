@@ -1,14 +1,14 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 21:55",
+  updated: "15 Nov, 22:11",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
-    { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
-      status: "Steady views 72 to 77 frames a second (15 to 26 this morning), loading in 14 seconds, zooming 42 to 55 (7 to 17 in the first build). Left: the last frames under 60 while the camera moves, and the fastest game speed." },
+    { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 3,
+      status: "In the build you can play: 60 to 80 frames a second in every view but fast panning (49 to 58), up from 15 to 26 this morning; zooming 60, the fastest speed 65. Left: panning hitches and a rise in memory." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "22:11", tags: ["Performance"], title: "v0.5c measured: 60 and more in almost every view",
+      body: `<p>The build you can play now was measured on the busy 1965 region at 3440 \u00D7 1440 on Ultra. This morning these views ran at 15 to 26 frames a second.</p>`,
+      chart: { type: "bars", title: "Frames a second in v0.5c (in brackets: tonight's first build)", goal: 60, max: 85, goalLabel: "60 frames a second: the target everywhere",
+        rows: [["High street", 80, "80 (51)"], ["Biggest town", 79, "79 (73)"], ["Busiest platform", 77, "77 (47)"], ["Opening view", 75, "75 (69)"], ["Fastest game speed", 65, "65 (8)"], ["Following a train", 64, "64 (51)"], ["Zooming in and out", 60, "60 to 63 (7 to 17)"], ["Whole region", 60, "60 (61)"], ["Panning fast", 49, "49 to 58 (11 to 16)"]] },
+      bad: `Fast panning still dips under 60 with hitches of 46 to 80 ms, zooming has occasional frames of 32 to 37 ms, and the platform showed one frame of 156 ms. Memory went up in this build: 10 GB of memory and 9.7 GB of video memory at the peak, against 6.6 and 8.4 in the first build; that is being chased next, because it is too much for a 16 GB PC.` },
+
     { time: "21:55", tags: ["Performance", "Building", "World"], title: "v0.5c is ready to play",
       body: `<p>The second build of the evening is in place. Checked at 3440 \u00D7 1440 before hand-over: a new game opens on the <b>32 km region</b>, makes it behind the loading screen, and opens on its largest town in 1905: Victorian brick terraces, shops, chapels and civic buildings, with no modern towers and no white sheets. A line over a hill builds.</p>
       <p>New over v0.5b: the big performance fix (steady views 72 to 77 frames a second, loading in 14 seconds), the zoom and pan fix (42 to 55 where there were 7 to 17), real bridges and tunnel mouths in the track preview, double track with signals in one drag (Q and R), and the propeller fix.</p>`,
