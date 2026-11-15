@@ -22,7 +22,7 @@ window.JOURNAL = {
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
-      status: "91 models on 108 bodies, up from 70 on 78. A 1905 game offers 6 steam engines, not 2; the 39-year gap in aircraft is closed." }
+      status: "91 models on 108 bodies, up from 70 on 78. A 1905 game offers at least 4 steam engines, not 2; the 39-year gap in aircraft is closed." }
   ],
 
   entries: [
