@@ -281,7 +281,7 @@ const tags=[...new Set(J.entries.flatMap(e=>e.tags))];
 let cur="All";
 function fig(f){return `<figure><img loading="lazy" src="img/${esc(f[0])}" alt="${esc(f[1])}"><figcaption>${esc(f[1])}</figcaption></figure>`}
 function chart(c){
-  if(c.type==="bars") return `<div class="chart"><h4>${esc(c.title)}</h4>${c.rows.map(r=>`<div class="bar"><span>${esc(r[0])}</span><div class="track" style="--goal:${100*c.goal/c.max}%"><b class="${r[1]>=c.goal?'ok':''}" style="width:${Math.min(100,100*r[1]/c.max)}%"></b></div><span>${esc(r[2]||r[1])}</span></div>`).join("")}<div class="legend"><span><i style="background:var(--text)"></i>${esc(c.goalLabel)}</span></div></div>`;
+  if(c.type==="bars") return `<div class="chart"><h4>${esc(c.title)}</h4>${c.rows.map(r=>`<div class="bar"><span>${esc(r[0])}</span><div class="track" style="--goal:${100*c.goal/c.max}%"><b class="${(c.lower?r[1]<=c.goal:r[1]>=c.goal)?'ok':''}" style="width:${Math.min(100,100*r[1]/c.max)}%"></b></div><span>${esc(r[2]||r[1])}</span></div>`).join("")}<div class="legend"><span><i style="background:var(--text)"></i>${esc(c.goalLabel)}</span></div></div>`;
   if(c.type==="cols"){const m=Math.max(...c.a,...c.b);return `<div class="chart"><h4>${esc(c.title)}</h4><div class="cols">${c.a.map((v,i)=>`<div class="col" title="${c.x[i]}: ${v} then, ${c.b[i]} planned"><i style="height:${100*v/m}%"></i><i style="height:${100*c.b[i]/m}%"></i></div>`).join("")}</div><div class="colx">${c.x.map(x=>`<span>${x}</span>`).join("")}</div><div class="legend"><span><i style="background:#3A4250"></i>${esc(c.la)}</span><span><i style="background:var(--accent)"></i>${esc(c.lb)}</span></div></div>`}
   return "";
 }

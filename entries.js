@@ -30,7 +30,7 @@ window.JOURNAL = {
       body: `<p>The graphics card needs <b>17 to 21 ms</b> a frame on Ultra at 3440 × 1440, against 16.7 ms for 60 frames a second, so it is close but over. The biggest single cost is preparing the scene for ray-traced light: 3.5 ms every frame, for every object on the 32 km map.</p>
       <p>Switching ray tracing off and using the lighter lighting method at full resolution should save 6 to 8 ms. That would put <b>Ultra at about 12 to 14 ms at full resolution</b>, inside the 60 target without lowering sharpness. Side-by-side stills of the two lighting methods are being made for you to judge before anything about Ultra changes.</p>
       <p>The frame-rate keeper (the game lowers its render resolution a little when it falls behind, so your monitor never drops out) is written and gets measured next.</p>`,
-      chart: { type: "bars", title: "Graphics card time per frame on Ultra, by view (milliseconds; lower is better)", goal: 16.7, max: 24, goalLabel: "16.7 ms: the budget for 60 frames a second",
+      chart: { type: "bars", title: "Graphics card time per frame on Ultra, by view (milliseconds; lower is better)", goal: 16.7, max: 24, lower: true, goalLabel: "16.7 ms: the budget for 60 frames a second",
         rows: [["Zoomed in", 17.5, "17.5 ms"], ["Default height", 18.5, "18.5 ms"], ["Fully zoomed out", 20.5, "20.5 ms"]] },
       bad: `None of this shows on screen yet, because the game's own code is three to four times over its budget (see the 13:30 entry). The graphics card's gain appears once that is fixed.` },
 
