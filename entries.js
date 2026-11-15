@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:31",
+  updated: "15 Nov, 15:44",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -10,7 +10,7 @@ window.JOURNAL = {
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 1.5,
       status: "Measured at your 3440 × 1440 for the first time. The game's own code is the limit, not the graphics card. Fixes under way." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
-      status: "Track is never refused for height any more. The new preview runs in a development build but still looks like a technical drawing." },
+      status: "Track is never refused for height and routes round houses by itself. The new preview runs in a development build but still looks like a technical drawing." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
       status: "Eight-direction roads, curves, road bridges and jitter-free junctions are in the simulation. Traffic is rewritten. Not on screen yet." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:44", tags: ["Building"], title: "Track now goes round what is in the way",
+      body: `<p>The silly plans are gone. A drag of track now <b>routes round houses</b> and anything else it cannot cross, crosses roads square or bridges them, and when the pointer sits on a house the line ends beside it instead of turning red. It no longer digs a tunnel on level land just to pass under a house, a road or another line.</p>
+      <p>If a house really is in the way, you can <b>buy and clear it</b>, at a price, with undo. Of 600 random drags across the 32 km region, <b>544 now build</b> (506 this afternoon, 374 in v0.4), and the route is worked out in the background so the game never waits for it.</p>`,
+      chart: { type: "bars", title: "Random track drags across the region that come back buildable (of 600)", goal: 600, max: 600, goalLabel: "600: every drag",
+        rows: [["v0.4", 374, "374"], ["Over hills (14:40)", 506, "506"], ["Round obstacles", 544, "544"]] },
+      bad: `On long routes through towns the line bends more than a person would draw it. The solid preview (track, earth slopes, real bridges in place of the wireframe) is still being built.` },
+
     { time: "15:30", tags: ["Roads"], title: "Motorways, road bridges and traffic that behaves",
       body: `<p>More of the road model has landed in the simulation:</p>
       <ul><li><b>Motorways from 1960:</b> their own road type with a wide corridor, speeds rising by generation from 110 to 160 km/h, and lanes with overtaking. In a test, coaches at 120 km/h passed lorries at 60 km/h with 18 lane changes in ten minutes. The road authority builds planned motorways in their opening year.</li>
