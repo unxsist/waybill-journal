@@ -1,10 +1,10 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 20:14",
+  updated: "15 Nov, 20:29",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
-  note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
+  note: "<b>Honest status:</b> v0.5b, the first build of this pass, is playable since this evening, with known faults (see the newest entries). v0.5c follows tonight with more performance, more art and the region as the default map. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 2,
@@ -26,6 +26,11 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "20:29", tags: ["Performance", "Building"], title: "v0.5b is ready to play",
+      body: `<p>The first build of the pass that you can play is in place. It was played through at 3440 \u00D7 1440 before hand-over: the new building tools work (the strip, the side profile, the steepest gradient flagged, prices; a line over a hill; a road with a bus stop, a lorry bay and a depot), platforms and a depot were built, and the performance test was run on it.</p>
+      <p><b>Play the 4 km county, not the region, in this build.</b></p>`,
+      bad: `Known in v0.5b: a new 1905 game on the 32 km region opens on a town with modern stand-in towers, and some tall buildings carry large broken white sheets over the streets (being tracked down). Zooming and fast panning stutter. The track preview is a pale flat band, faint straight lines cross the land while dragging, and the road preview still steps on gentle diagonals. Propellers show grey discs, town cars turn back at bridges over water, and crowds are drawn at full detail. Most of these are fixed in v0.5c, due later tonight; the new road surfaces are not in it either, because they crashed in their test.` },
+
     { time: "20:14", tags: ["Performance"], title: "Honest numbers for tonight's first build: moving the camera is still slow",
       body: `<p>A second, stricter test of tonight's first build on the busy 1965 region confirms the steady views (61 to 73 frames a second for the opening view, the biggest town and the whole region) and shows where it still fails:</p>
       <ul><li><b>Zooming</b> from close up to the whole region and back: 7 to 17 frames a second.</li>
