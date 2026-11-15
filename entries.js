@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:20",
+  updated: "15 Nov, 15:21",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -17,8 +17,8 @@ window.JOURNAL = {
       status: "Measured against real towns and the causes found. New brick, roofs and paint made; each building gets its own colours." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "Seven wardrobes from 1870 to 2045 designed; 122 figures being built. The game now dresses people by year." },
-    { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1,
-      status: "The map lays motorway routes between cities from 1960. The motorway road type itself lands tonight." },
+    { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
+      status: "Motorways are a real road type now and the map lays them between cities from 1960. Interchanges and the drawing are next." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
@@ -26,6 +26,17 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:25", tags: ["World", "Roads"], title: "Crooked fields, a real coast, and motorways on the map",
+      body: `<p>Second round on the 32 km region, answering what still looked generated:</p>
+      <ul><li><b>Fields</b> are irregular shapes at any angle, following the roads and the lie of the land: small and crooked on the clay, bigger and straighter on the chalk. No more staircase hedges.</li>
+      <li><b>Towns:</b> old cores are always crooked, districts turn across their roads, and the edge frays into ribbon houses, allotments, playing fields ringed with poplars, a big house in its park, a works. Villages have greens.</li>
+      <li><b>Roads</b> are laid with the new eight-direction model, in long sweeping curves, with bridges.</li>
+      <li><b>The coast</b> has coves, headlands, islets, beaches of varying width, dunes, cliffs and a spit across the estuary.</li>
+      <li><b>Motorways</b> are planned for every start year with their opening years, and laid as a real motorway road type before the other roads.</li>
+      <li>Market stalls, bunting, kiosks, bicycles and planters are placed in the towns.</li></ul>`,
+      figs: [["world_before_v04_ingame_city.jpg", "Before, in the game: a v0.4 city is a brown grid"], ["world_after_port_spit_1965.jpg", "After, map view: the port city with its districts and the spit"], ["world_after_fields_vale_1905.jpg", "After, map view: fields in the vale in 1905"], ["world_after_region_1985_map.jpg", "After, map view: the whole region in 1985"]],
+      bad: `The new region has still not been judged in the game itself; the map views use flat debug colours. The game does not yet draw the new hedges or the new kinds of ground (heath, marsh, orchards). Motorways have no interchanges yet and stop short of one city.` },
+
     { time: "15:20", tags: ["Performance"], title: "The graphics card's side, measured step by step",
       body: `<p>The graphics card needs <b>17 to 21 ms</b> a frame on Ultra at 3440 × 1440, against 16.7 ms for 60 frames a second, so it is close but over. The biggest single cost is preparing the scene for ray-traced light: 3.5 ms every frame, for every object on the 32 km map.</p>
       <p>Switching ray tracing off and using the lighter lighting method at full resolution should save 6 to 8 ms. That would put <b>Ultra at about 12 to 14 ms at full resolution</b>, inside the 60 target without lowering sharpness. Side-by-side stills of the two lighting methods are being made for you to judge before anything about Ultra changes.</p>
