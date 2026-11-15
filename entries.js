@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 16:46",
+  updated: "15 Nov, 16:58",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["21", "specialists at work"], ["91", "vehicle models, was 70"], ["134", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
@@ -22,7 +22,7 @@ window.JOURNAL = {
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
-      status: "91 models on 108 bodies, up from 70 on 78. A 1905 game offers at least 4 steam engines, not 2; the 39-year gap in aircraft is closed." }
+      status: "102 models on 119 bodies, up from 70 on 78. Every decade from 1850 to 1960 has 3 to 6 steam engines; the 39-year gap in aircraft is closed." }
   ],
 
   entries: [
@@ -51,7 +51,7 @@ window.JOURNAL = {
       <li><b>Air:</b> a narrowbody, a regional jet and a jumbo. The years 2001 to 2039, when a single aircraft was on sale, now offer four or five per decade, and every size of airport has a type in every era.</li>
       <li><b>Water:</b> a bulk coaster and a product tanker give river freight from 1960 to 2040. Three to five hulls per decade now.</li>
       <li><b>Road:</b> an eight-wheeler with tipper and tanker bodies, and five cargo trailers for the 1972 articulated lorry.</li></ul>
-      <p>That is <b>91 models on 108 different bodies</b>; this morning there were 70 on 78.</p>`,
+      <p>That was 91 models on 108 different bodies. A fourth batch followed within the hour: three more steam engines (an express, a mixed-traffic and a heavy freight engine), the first diesel, a single-deck bus, a charabanc, two motor coaches and a bendy bus. The count is now <b>102 models on 119 bodies</b>; this morning there were 70 on 78.</p>`,
       bad: `Rail from 1960 to 2030 is still thin: the new diesels, the shunter, the diesel high-speed train and the multiple units are still being built. New buses and coaches are queued. None of the new models has been seen in the game yet.` },
 
     { time: "16:17", tags: ["Performance"], title: "First real gain: up to twice the frame rate",
