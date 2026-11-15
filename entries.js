@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:03",
+  updated: "15 Nov, 17:17",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -18,7 +18,7 @@ window.JOURNAL = {
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "Seven wardrobes from 1870 to 2045 designed; 122 figures being built. The game now dresses people by year." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
-      status: "Motorways exist from 1960 with overtaking lanes and rising speeds; the map plans them between cities. Interchanges and the drawing are next." },
+      status: "Motorways from 1960 with overtaking lanes, rising speeds and diamond interchanges are in the simulation, and roads upgrade in place. The drawing is next." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "17:17", tags: ["Roads", "Performance"], title: "Motorway interchanges, road upgrades, and 3,000 buses",
+      body: `<p><b>Interchanges:</b> motorways now have diamond junctions with slip roads that ease out of the outer lane, one for each town near a long straight stretch; a bus line runs through one in the tests. The road authority builds each planned motorway in its opening year, and the map generator already lays them this way.</p>
+      <p><b>Upgrade in place:</b> a road can be upgraded along a drag, lane to street to main road to motorway.</p>
+      <p><b>Speed:</b> a stress test with 3,000 buses on 130 lines across the 32 km region first ran at 15 ms a step with spikes of a second. Five causes were found and fixed (vehicles in depots searching for a route every step, impossible routes searched across the whole map, every path re-checked every step). With 1,629 vehicles on the road at once, a whole step of the world now takes <b>4.5 ms on average</b>.</p>`,
+      bad: `The slowest steps (45 ms, about one in a hundred) fall at month ends, when towns and the economy are worked out. Vehicles still enter a bay with a three-point turn. None of this is drawn on screen yet.` },
+
     { time: "17:03", tags: ["Vehicles"], title: "Ships, second round: two different barges and a painted narrowboat",
       body: `<p>The four faults sent back this afternoon are answered. The <b>1905 barge</b> now has an open steering position under a canvas awning, a tall stovepipe, tarred plating under a coloured top strake and a rounded stern; the <b>1965 barge</b> has a glazed steel wheelhouse with radar and lights and green sliding covers. They are different boats at a glance. Wheelhouses are built with real framed glazing, doors and roof gear. The <b>narrowboat</b>'s cabin carries its painted panels and lettering in red, blue and gold. Hold edges and rails are in the company's second colour, so a boat stands out from the water.</p>
       <p>Also done: the container ship with six container lines' liveries, the packet steamer with a gilt name on coloured paddle boxes, and a name on every bow.</p>`,
