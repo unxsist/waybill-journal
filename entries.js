@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:17",
+  updated: "15 Nov, 17:21",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -20,12 +20,18 @@ window.JOURNAL = {
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
       status: "Motorways from 1960 with overtaking lanes, rising speeds and diamond interchanges are in the simulation, and roads upgrade in place. The drawing is next." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
-      status: "Every train, road vehicle, ship and aircraft ranked beside the locomotive. First rebuilds and liveries rendered." },
+      status: "Nine new steam engines, thirteen aircraft in company colours, rebuilt lorries and barges are made. The modern locomotives and coaches are still to be rebuilt. Nothing seen in the game yet." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
       status: "102 models on 119 bodies, up from 70 on 78. Every decade from 1850 to 1960 has 3 to 6 steam engines; the 39-year gap in aircraft is closed." }
   ],
 
   entries: [
+    { time: "17:21", tags: ["Vehicles", "Variety"], title: "Nine new steam engines and seven new aircraft",
+      body: `<p><b>Steam:</b> nine engines from the kit, each shown beside the locomotive you praised (the green one behind): an 1850 express single in red, an 1852 mixed-traffic engine, an 1865 passenger engine, an 1878 goods engine, a 1906 mixed-traffic 4-6-0, a 1911 heavy freight 2-8-0, a 1922 express in maroon, a 1946 mixed-traffic engine and a 1954 heavy freight 2-10-0. Also built: the first diesel, a 1932 electric unit, an intercity coach (so locomotive-hauled trains exist after 2025), a mail van, and container wagons in four shipping lines' colours.</p>
+      <p><b>Air:</b> all thirteen aircraft are exported, each in two company colours. The seven new ones: a 1928 trimotor, a 1947 propeller airliner, a 1962 commuter turboprop, a 1971 jumbo, a 1989 narrowbody, a 1996 regional jet and a 2038 electric commuter. The 2042 aircraft is rebuilt.</p>`,
+      figs: [["trains_steam_family.jpg", "Nine new steam engines, each beside the praised locomotive"], ["air_new_types.jpg", "The seven new aircraft in their company colours"]], stack: true,
+      bad: `The new engines are good, not yet at the praised locomotive's level (simpler cabs, fewer fittings), and the three big black freight engines look alike from the game's distance. The modern box locomotives and the 1970 coach, the most-seen vehicle in the game, are still only repainted; their rebuild now comes first. Two of the new aircraft have lumpy skins and the jumbo's cockpit windows are too small. The airports are still grey. None of this has been seen in the game yet.` },
+
     { time: "17:17", tags: ["Roads", "Performance"], title: "Motorway interchanges, road upgrades, and 3,000 buses",
       body: `<p><b>Interchanges:</b> motorways now have diamond junctions with slip roads that ease out of the outer lane, one for each town near a long straight stretch; a bus line runs through one in the tests. The road authority builds each planned motorway in its opening year, and the map generator already lays them this way.</p>
       <p><b>Upgrade in place:</b> a road can be upgraded along a drag, lane to street to main road to motorway.</p>
