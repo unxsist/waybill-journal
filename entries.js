@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:44",
+  updated: "15 Nov, 15:51",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:51", tags: ["Vehicles", "Variety"], title: "Lorries that carry what they carry",
+      body: `<p>In v0.4 one flatbed stood in for every cargo. The 1932 lorry is rebuilt on a proper coach-built cab (radiator shell, louvred bonnet, swept wings, glass set back in its frames) and now comes as a <b>tipper with a coal or ore heap, a sheeted bulk body, a tanker, a timber lorry with its logs, and a box van</b> in six sign-written trades. The 1972 and 2000 articulated lorries have rebuilt tractors and five cargo trailers each, with hauliers' names on the sides.</p>
+      <p>Written and waiting to be rendered: an eight-wheeler, a 1912 lorry and mail van, 1962 and 1985 lorries, a 1925 single-deck bus, 1952 and 1988 coaches, a charabanc, a bendy bus, electric buses and lorries, the 2045 driverless set, cars for the 1930s, 1955, 1984, 2025 and 2040, and three horse-drawn vehicles.</p>`,
+      figs: [["road_1932_lorries_before_after.jpg", "Left: the v0.4 flatbed. Middle and right: the rebuilt 1932 lorry as a coal tipper and a timber lorry"]], stack: true,
+      bad: `The white wings are a fault of the review picture, not the lorry. The tanker has loose strap ends and floating tail lamps (fixed, re-rendering). Cabs are still plain close up: no number plates or lettering on the doors yet. Not yet seen moving in the game.` },
+
     { time: "15:44", tags: ["Building"], title: "Track now goes round what is in the way",
       body: `<p>The silly plans are gone. A drag of track now <b>routes round houses</b> and anything else it cannot cross, crosses roads square or bridges them, and when the pointer sits on a house the line ends beside it instead of turning red. It no longer digs a tunnel on level land just to pass under a house, a road or another line.</p>
       <p>If a house really is in the way, you can <b>buy and clear it</b>, at a price, with undo. Of 600 random drags across the 32 km region, <b>544 now build</b> (506 this afternoon, 374 in v0.4), and the route is worked out in the background so the game never waits for it.</p>`,
