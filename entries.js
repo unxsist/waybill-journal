@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 18:52",
+  updated: "15 Nov, 19:06",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,16 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "19:06", tags: ["Building"], title: "Try this: the new building tools in five steps",
+      body: `<p>For tonight's build. Rail mode is <b>Y</b>, the track tool is <b>1</b>.</p>
+      <ul><li><b>1. Look before you press.</b> Move the pointer over a hillside: thin dark contour lines show the land's height round it, and the ends of your own track show small warm rings where a drag would continue the line.</li>
+      <li><b>2. One drag, over the land.</b> Press in a field, drag down into a valley and across a river, and let go. While you hold, the preview is the railway you will get: grey ballast and rails, earth slopes for embankments and cuttings, the bridge in its real arches and piers, a tunnel with its portals. Labels name the big structures; the strip and the side profile show the climb and the steepest gradient; the price sits at the pointer.</li>
+      <li><b>3. Take charge of height while you hold.</b> <b>E</b> switches between follow the land, keep level, and no bridges or tunnels. <b>Page Up</b> and <b>Page Down</b> raise or lower the end a metre. <b>G</b> gives a gentler gradient. <b>W</b> changes the shape. <b>Escape</b> drops the drag.</li>
+      <li><b>4. Drag into a village.</b> Where it cannot be built the stretch turns red with the reason at the place, and the pointer offers <b>F</b> with a price: going round, the other bend, buying the houses, or stopping before them. Press F and the preview becomes that answer.</li>
+      <li><b>5. A station on a slope, then a road.</b> Station tool (<b>2</b>): click on a line that climbs, and the line is relaid level under the platform. Road mode (<b>U</b>, tool 1): drag at a slant and the road runs diagonally with a curve at the bend, and crosses the railway square.</li></ul>
+      <p>New, first look: <b>Q</b> lays double track in one drag, <b>R</b> adds signals along it.</p>`,
+      bad: `A long line through a town can still take an odd way. Across a steep drop, the height reads mostly in the side profile and less in the world itself.` },
+
     { time: "18:52", tags: ["Performance", "Building"], title: "The simulation's own spikes are gone, and double track in one drag",
       body: `<p><b>Speed of the simulation:</b> the pauses of up to 150 ms whenever track changed are gone. After any change the game re-read all 16.7 million tiles of the region to rebuild its map of the track; it now re-reads only the part that changed, in 0.5 to 3 ms. Stations and towns no longer look at every house on the map. On a busy 2030 game a step of the simulation takes 0.43 ms on average, and one step in 6,000 takes more than 5 ms; before it was about one in 30. The results of the simulation are unchanged.</p>
       <p><b>Building:</b> a drag can now lay <b>double track</b>, and place <b>signals along the line</b>, in one action with one undo.</p>`,
