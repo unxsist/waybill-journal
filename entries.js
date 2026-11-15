@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 19:06",
+  updated: "15 Nov, 19:15",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -33,7 +33,7 @@ window.JOURNAL = {
       <li><b>3. Take charge of height while you hold.</b> <b>E</b> switches between follow the land, keep level, and no bridges or tunnels. <b>Page Up</b> and <b>Page Down</b> raise or lower the end a metre. <b>G</b> gives a gentler gradient. <b>W</b> changes the shape. <b>Escape</b> drops the drag.</li>
       <li><b>4. Drag into a village.</b> Where it cannot be built the stretch turns red with the reason at the place, and the pointer offers <b>F</b> with a price: going round, the other bend, buying the houses, or stopping before them. Press F and the preview becomes that answer.</li>
       <li><b>5. A station on a slope, then a road.</b> Station tool (<b>2</b>): click on a line that climbs, and the line is relaid level under the platform. Road mode (<b>U</b>, tool 1): drag at a slant and the road runs diagonally with a curve at the bend, and crosses the railway square.</li></ul>
-      <p>New, first look: <b>Q</b> lays double track in one drag, <b>R</b> adds signals along it.</p>`,
+      <p>In the first build tonight, a bridge previews as a plain deck on piers and a tunnel mouth as a simple stone arch. The second build draws them with their real arches and portals, and adds <b>Q</b> for double track in one drag and <b>R</b> for signals along it.</p>`,
       bad: `A long line through a town can still take an odd way. Across a steep drop, the height reads mostly in the side profile and less in the world itself.` },
 
     { time: "18:52", tags: ["Performance", "Building"], title: "The simulation's own spikes are gone, and double track in one drag",
