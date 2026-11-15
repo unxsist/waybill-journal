@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 18:09",
+  updated: "15 Nov, 18:16",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["171", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
@@ -22,7 +22,7 @@ window.JOURNAL = {
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Nine new steam engines, thirteen aircraft in company colours, rebuilt lorries and barges are made. The modern locomotives and coaches are still to be rebuilt. Nothing seen in the game yet." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
-      status: "102 models on 119 bodies, up from 70 on 78. Every decade from 1850 to 1960 has 3 to 6 steam engines; the 39-year gap in aircraft is closed." }
+      status: "115 models on 135 bodies, up from 70 on 78. Every decade from 1850 to 1960 has 3 to 6 steam engines, and every decade from 1930 has 3 to 5 aircraft." }
   ],
 
   entries: [
