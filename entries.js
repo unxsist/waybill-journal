@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 18:50",
+  updated: "15 Nov, 18:52",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,11 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "18:52", tags: ["Performance", "Building"], title: "The simulation's own spikes are gone, and double track in one drag",
+      body: `<p><b>Speed of the simulation:</b> the pauses of up to 150 ms whenever track changed are gone. After any change the game re-read all 16.7 million tiles of the region to rebuild its map of the track; it now re-reads only the part that changed, in 0.5 to 3 ms. Stations and towns no longer look at every house on the map. On a busy 2030 game a step of the simulation takes 0.43 ms on average, and one step in 6,000 takes more than 5 ms; before it was about one in 30. The results of the simulation are unchanged.</p>
+      <p><b>Building:</b> a drag can now lay <b>double track</b>, and place <b>signals along the line</b>, in one action with one undo.</p>`,
+      bad: `On a much heavier test (280 trains and 410 road vehicles) about one step in 80 still takes more than 5 ms, from towns growing; that is next, with a test of a thousand road vehicles. Where double track meets single track there are no crossovers yet.` },
+
     { time: "18:50", tags: ["Roads"], title: "The traffic rewrite is in, the new road surfaces are not yet",
       body: `<p>The rewritten town traffic is merged and seen in the game on the 32 km region: vehicles keep their lanes, brake and pull away with weight for their type, trailers follow round turns, parked cars pull out and park again, and there are brake lights and indicators. <b>Junctions no longer knot</b>: v0.4 had eight vehicles locked in one junction; now they clear and move. The rewrite also halved the cost of traffic and removed the stutter each time a town laid a road.</p>`,
       bad: `The fix for the zigzag itself is not in tonight's build. Roads in eight directions exist in the simulation, but the new road surfaces that draw them failed twice (they drew nothing, and cost far too much) and are being rebuilt; until they land the screen still shows v0.4's road pieces, so diagonal roads still look like staircases. With the old pieces, town cars turn back at road bridges over water. Motorways are drawn in code but not seen yet, and the film following a lorry through town, country and motorway has not been made.` },
