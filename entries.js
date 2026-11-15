@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 16:58",
+  updated: "15 Nov, 17:03",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "17:03", tags: ["Vehicles"], title: "Ships, second round: two different barges and a painted narrowboat",
+      body: `<p>The four faults sent back this afternoon are answered. The <b>1905 barge</b> now has an open steering position under a canvas awning, a tall stovepipe, tarred plating under a coloured top strake and a rounded stern; the <b>1965 barge</b> has a glazed steel wheelhouse with radar and lights and green sliding covers. They are different boats at a glance. Wheelhouses are built with real framed glazing, doors and roof gear. The <b>narrowboat</b>'s cabin carries its painted panels and lettering in red, blue and gold. Hold edges and rails are in the company's second colour, so a boat stands out from the water.</p>
+      <p>Also done: the container ship with six container lines' liveries, the packet steamer with a gilt name on coloured paddle boxes, and a name on every bow.</p>`,
+      figs: [["ships_barges_v4_before_after.jpg", "Left before, right now: the narrowboat, the 1905 barge and the 1965 barge, each loaded with coal beside an empty one riding high"]], stack: true,
+      bad: `The narrowboat's cloths still read grey where they should be black. Eleven more vessels are written but not yet rendered or exported, and none has been seen in the game.` },
+
     { time: "16:46", tags: ["World", "Colour"], title: "The buildings a town was missing",
       body: `<p>Towns were whole districts of one terrace repeated. A new artist builds what makes a town a town, and the first ten are done for the Victorian era, so they stand in every later year too: a <b>town hall with a clock tower</b>, a market hall with a glass and slate roof, a chapel, a board school, a quay warehouse with hoists, a bank, a cemetery, a football ground, a bandstand and a brewery. The map places them where they belong: on the square, on corners, by the water, in the park, at the edge of town.</p>
       <p>Next, era by era: a 1930s roadhouse pub, a department store, a lido, a 1960s estate pub and system-built school, swimming baths, a retail shed, a business-park office, a vertical farm, then villas, mansion flats and almshouses.</p>`,
