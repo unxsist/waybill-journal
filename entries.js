@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 20:03",
+  updated: "15 Nov, 20:10",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["21", "specialists at work"], ["115", "vehicle models, was 70"], ["171", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
 
   points: [
@@ -22,10 +22,19 @@ window.JOURNAL = {
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Nine new steam engines, thirteen aircraft in company colours, rebuilt lorries and barges are made. The modern locomotives and coaches are still to be rebuilt. Nothing seen in the game yet." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
-      status: "115 models on 135 bodies, up from 70 on 78. Every decade from 1850 to 1960 has 3 to 6 steam engines, and every decade from 1930 has 3 to 5 aircraft." }
+      status: "132 models on 159 bodies in tonight\u2019s second build, up from 70 on 78. Road transport now starts in 1850, and every mode has a choice in every decade." }
   ],
 
   entries: [
+    { time: "20:10", tags: ["Variety"], title: "132 models: the line-up is nearly all built",
+      body: `<p>For tonight's second build the line-up reaches <b>132 models on 159 different bodies</b>; this morning it was 70 on 78. New in this batch:</p>
+      <ul><li><b>Rail:</b> a shunter, a heavy diesel, a railcar, an electric unit, an intercity coach and a mail van.</li>
+      <li><b>Road:</b> lorries for the 1960s and 1980s, electric and driverless lorries, buses and a van, cargo bodies for the 1905 steam wagon, and three horse-drawn vehicles, so <b>road transport now exists from 1850</b>.</li>
+      <li><b>Water:</b> a coaster tanker, a river steamer, a water bus, a container barge, a hydrofoil and a push convoy.</li>
+      <li><b>Air:</b> three more aircraft.</li></ul>
+      <p>Only a handful of the designed models are still unbuilt.</p>`,
+      bad: `Most of these were exported tonight without a review render and none has been judged in the game, so some will look wrong. Two multiple units, the diesel high-speed train and an electric ferry wait for the next import.` },
+
     { time: "20:03", tags: ["Performance"], title: "For tonight's second build: 72 to 77 frames a second, loading in 14 seconds",
       body: `<p>One more cause found, and it was everywhere: every time the game asked how high the land is at some spot, it walked through every levelled site on the map. The ground, the ground cover and the loading all paid for it. With that gone, in the busy 1965 views the game's own code takes <b>7.5 to 9.7 ms a frame</b> (16 to 18 in tonight's first build), which gives <b>72 to 77 frames a second</b>, and loading a region falls from about 40 seconds to <b>14</b>.</p>`,
       chart: { type: "bars", title: "Loading a busy region (seconds; lower is better)", goal: 15, max: 45, lower: true, goalLabel: "15 seconds",
