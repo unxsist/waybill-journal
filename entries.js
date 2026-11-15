@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 15:19",
+  updated: "15 Nov, 15:20",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["19", "specialists at work"], ["75", "vehicle models, was 70"], ["134", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,14 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "15:20", tags: ["Performance"], title: "The graphics card's side, measured step by step",
+      body: `<p>The graphics card needs <b>17 to 21 ms</b> a frame on Ultra at 3440 × 1440, against 16.7 ms for 60 frames a second, so it is close but over. The biggest single cost is preparing the scene for ray-traced light: 3.5 ms every frame, for every object on the 32 km map.</p>
+      <p>Switching ray tracing off and using the lighter lighting method at full resolution should save 6 to 8 ms. That would put <b>Ultra at about 12 to 14 ms at full resolution</b>, inside the 60 target without lowering sharpness. Side-by-side stills of the two lighting methods are being made for you to judge before anything about Ultra changes.</p>
+      <p>The frame-rate keeper (the game lowers its render resolution a little when it falls behind, so your monitor never drops out) is written and gets measured next.</p>`,
+      chart: { type: "bars", title: "Graphics card time per frame on Ultra, by view (milliseconds; lower is better)", goal: 16.7, max: 24, goalLabel: "16.7 ms: the budget for 60 frames a second",
+        rows: [["Zoomed in", 17.5, "17.5 ms"], ["Default height", 18.5, "18.5 ms"], ["Fully zoomed out", 20.5, "20.5 ms"]] },
+      bad: `None of this shows on screen yet, because the game's own code is three to four times over its budget (see the 13:30 entry). The graphics card's gain appears once that is fixed.` },
+
     { time: "15:20", tags: ["Vehicles", "Variety"], title: "Goods trains with owners, and a family of new steam engines",
       body: `<p>Coal wagons now come in <b>four owners' liveries</b> (red oxide, black, ochre, railway grey) with painted lettering, and the coal is a separate load, so wagons can run empty. Every early goods train gets real colour.</p>
       <p>A <b>steam kit</b> built from the praised locomotive's own generator turns one specification into one engine. Five new engines with their tenders are built, each told apart by its wheels, cab and chimney, plus the four-wheel carriages of the 1850s; six more, including a shunter and a first diesel, are queued. Across the fleet: the later steam express in deep blue with red wheels, a two-tone green electric, company marks and running numbers, crests on the older coaches, coloured roofs and lamps at every cab end.</p>`,
