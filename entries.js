@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 17:52",
+  updated: "15 Nov, 18:09",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["21", "specialists at work"], ["102", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> nothing below is in a build you can play yet. The first v0.5 test build comes when the first performance and building work is merged. Until then the pictures are from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "18:09", tags: ["Building"], title: "The track preview is solid now, at the camera you play at",
+      body: `<p>The wireframe is gone. From the default camera at 3440 \u00D7 1440, a drag of track now shows a <b>stone-grey ballast bed with rails</b> about twenty pixels wide (v0.4's was a hairline), earth slopes for embankments and cuttings, a deck on piers for a bridge, and a darkened hill with a stone portal for a tunnel. Roads preview as an asphalt band with kerbs, curving in arcs. Labels appear only on the big structures; one summary at the pointer gives length, climb, steepest gradient and the fix key when something is in the way.</p>
+      <p>Being added now: bridges and tunnel mouths drawn with the very pieces the finished railway uses.</p>`,
+      figs: [["building_river_before_after.jpg", "The same drag across the river from the default camera: v0.4 on top, now below"]], stack: true,
+      bad: `Across the escarpment the preview still reads as a band with little sense of the drop; the side profile above the build bar is the answer and is being merged. The grey bed reads a little like a road until the rails are clearer. A long route through a town still bends more than a person would draw.` },
+
     { time: "17:51", tags: ["World", "Colour"], title: "36 new buildings, from 1850 to 2050",
       body: `<p>The buildings that make a town a town now cover every era, with roofs in slate, red and brown tile, glass, copper, zinc, planted roofs and solar panels:</p>
       <ul><li><b>1850 to 1917:</b> town hall, market hall, chapel, board school, bank, quay warehouse, brewery, cemetery, football ground, bandstand, villa, mansion flats, almshouses, station hotel, post office, library, police station, cottage hospital. These stay standing in every later year.</li>
