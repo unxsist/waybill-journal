@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "15 Nov, 22:11",
+  updated: "15 Nov, 23:34",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["21", "specialists at work"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
@@ -26,6 +26,16 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "23:34", tags: ["Building", "Performance", "Colour"], title: "You played v0.5c: what you said, and the plan for the night",
+      body: `<p><b>What you said.</b> The frame rate is much better. Building is more intuitive, but not great yet. And a long list of things that got in the way:</p>
+      <ul><li><b>Controls:</b> W A S D fight the build tools, so the camera cannot move while building; tilting and panning with the right mouse button is slow; R for airport size clashes too; changing controls in Settings crashes the game.</li>
+      <li><b>Building:</b> stations only fit at certain angles and overlap curves; depots are hard to turn; junctions do not line up; a second track for passing will not attach; signals cannot be placed; placing things stutters; road building is wonky.</li>
+      <li><b>The interface</b> is confusing and needs a complete revisit: it shows things that cannot be built yet, there is no guidance, it is unclear how to buy aircraft or what a shipyard is, and the demand button freezes the game.</li>
+      <li><b>The world:</b> grass through roads, jitter on roads, vegetation popping in while zooming, trains that look half transparent and jitter, a 2030 game that does not feel like 2030, cities without a modern core, and still greyish: it needs to feel lush.</li>
+      <li><b>Wishes:</b> Dutch, sound and music, train crashes, a busy showcase game for every era, generated menus and a logo, and a better name than Waybill.</li></ul>
+      <p><b>The plan for the night</b>, in this order: controls and building; the interface's worst traps, a first game that teaches by doing, and Dutch; a lush world and cities with a modern core; six showcase games; sound effects and music; names and logos to choose from; with the frame rate guarded throughout. Fifteen specialists work until the morning. A build called v0.6 should be ready by about half past eight, played through and measured first, together with a short film of everything the game has to offer.</p>`,
+      bad: `A complete restyle of the interface cannot be built and proven in one night. Tonight removes the traps and adds the guidance; the restyle arrives as two or three directions in pictures for you to choose from.` },
+
     { time: "22:11", tags: ["Performance"], title: "v0.5c measured: 60 and more in almost every view",
       body: `<p>The build you can play now was measured on the busy 1965 region at 3440 \u00D7 1440 on Ultra. This morning these views ran at 15 to 26 frames a second.</p>`,
       chart: { type: "bars", title: "Frames a second in v0.5c (in brackets: tonight's first build)", goal: 60, max: 85, goalLabel: "60 frames a second: the target everywhere",
