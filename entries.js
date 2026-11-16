@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 01:30",
+  updated: "16 Nov, 01:49",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "01:49", tags: ["Colour", "Sound"], title: "Why it still looked grey, and the game has sound and music",
+      body: `<p><b>A lush land.</b> The first piece of tonight's colour work is in: the land is a deep, living green instead of olive, every tree has its own green, shade keeps its colour, and there is less haze.</p>
+      <p><b>The find of the night.</b> In the town half of that picture every block was still the same beige. Checking why showed that the step which brings art into the game <b>throws away the colour data stored on every model</b>. The artists put their paint codes, colour variation and stains there. So none of the per-building paint, and no tint of that kind on anything, has been reaching the screen. The import step is being fixed now; the 88 painted buildings are re-imported first, and then everything else through the night in the order the camera sees it. All 1,600 assets take about seven hours, so the morning build gets what is done by then.</p>
+      <p><b>Sound and music.</b> 71 sound effects and 18 pieces of music were made with ElevenLabs and are in the game: three pieces of music per era plus a main-menu theme, playing one at a time with rests between; engines for steam, diesel and electric trains (electric trains no longer chuff), horns, town sounds by era, the sea, road vehicles, ships, aircraft taking off and landing, breakdowns, train crashes, track being laid, and a rocket launch. About 36,000 of your 76,000 ElevenLabs credits were used, inside the limit of half.</p>`,
+      figs: [["colour_lush_1965.jpg", "1965 in the game: as built on the left, lush on the right. The field changed; the town had not yet"]], stack: true,
+      bad: `Nobody has listened to any of the sound or music: it was judged by measurement only (loudness, clipping, loops), so it may sound wrong in ways numbers do not show. How much of the grey the lost colour data explains will only be known when the re-imported buildings are seen in the game.` },
+
     { time: "01:29", tags: ["Building", "Interface"], title: "Halfway through the night: most of your list is answered",
       body: `<p>Two hours in, these points from your playtest are done and handed over for the three o'clock build:</p>
       <ul><li><b>The crash</b> when changing controls in Settings: fixed.</li>
