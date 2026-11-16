@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 04:14",
+  updated: "16 Nov, 04:19",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "04:19", tags: ["Space"], title: "A first look at space: a rocket stands on its pad, and launches",
+      body: `<p>You said: \u201Cif there's room left.. impress me with the space continuation\u201D. In the 2048 showcase game a launch field now places itself on a spit of coast: a 73 m two-stage rocket named Crane beside its 93 m service tower, a hangar, a tank farm, a water tower and lightning masts. Then the countdown, ignition, a long flame, a climb with weight, and the turn out over the sea, with its own sound.</p>
+      <p>This is a first look, built in three hours on a separate branch. It is not in the morning build; it should close the showcase film.</p>`,
+      figs: [["space_standing.jpg", "The rocket on its pad by the sea, in the game"], ["space_climb.jpg", "The climb out over the sea"]],
+      bad: `In these first frames the light of the engines washed the whole picture out to white, and the field stood in the middle of a wood; both are fixed and being checked in one more run. There is no cloud of smoke and steam rolling across the pad yet. Nothing feeds the field yet: the trains and lorries that should bring its cargo are the next step.` },
+
     { time: "04:14", tags: ["Variety", "Vehicles"], title: "Seven showcase games, with nearly every vehicle running",
       body: `<p>You asked for \u201Ca playable map with loads of trains, lorries, boats and planes\u201D, one for every era. There are seven, for <b>1853, 1905, 1935, 1965, 1995, 2030 and 2048</b>, on the new-game screen. Each is a running company on the 32 km region with a healthy bank balance, opening on its busiest place.</p>
       <ul><li><b>Per game:</b> 25 to 51 lines, 26 to 44 trains, 38 to 70 buses, coaches, lorries and horse carts, 10 to 41 boats, and 6 to 11 aircraft from 1935.</li>
