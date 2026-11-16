@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 04:04",
+  updated: "16 Nov, 04:14",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,16 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "04:14", tags: ["Variety", "Vehicles"], title: "Seven showcase games, with nearly every vehicle running",
+      body: `<p>You asked for \u201Ca playable map with loads of trains, lorries, boats and planes\u201D, one for every era. There are seven, for <b>1853, 1905, 1935, 1965, 1995, 2030 and 2048</b>, on the new-game screen. Each is a running company on the 32 km region with a healthy bank balance, opening on its busiest place.</p>
+      <ul><li><b>Per game:</b> 25 to 51 lines, 26 to 44 trains, 38 to 70 buses, coaches, lorries and horse carts, 10 to 41 boats, and 6 to 11 aircraft from 1935.</li>
+      <li><b>Nearly every model of the year is running:</b> all 19 in 1853, all 28 in 1905, 38 of 39 in 1935, all 50 in 1965, 42 of 43 in 1995, all 35 in 2030 and 32 of 33 in 2048.</li>
+      <li><b>A signalled main line</b> between two big cities in every year, shared by an express and a mail train.</li>
+      <li><b>A sea port</b> with two harbours: a ferry, a tanker, bulk carriers and, from 1995, container ships; steamers, the packet and the collier in the early years.</li>
+      <li><b>A maglev</b> in the 2030 game.</li></ul>
+      <p>Each game was run for ten minutes after everything was added: nothing stuck, and money rising.</p>`,
+      bad: `The 2048 game has no maglev: no route out of its city could be built. The main line is single track with passing loops, ending at single-platform stations on the city edges, not a double-track line with a junction station.` },
+
     { time: "04:03", tags: ["Performance", "Building", "Sound"], title: "A build with tonight's fixes is in place",
       body: `<p><b>v0.5f</b> is in your play folder, played through and measured first. It carries most of what the night has answered so far: the camera that always works while building, signals, passing loops, joining track, depots that face the line, stations clear of curves, roads in eight directions with motorways, the modern city cores, the lusher land, sound and music, Dutch, the guided first game, the showcase games, the fix for the jittering trains, and the keys with no clashes.</p>
       <ul><li><b>Measured:</b> 58 frames a second on the busy region with almost no slow frames; the worst single frame was 93 ms, where last evening's build had one of over a second.</li>
