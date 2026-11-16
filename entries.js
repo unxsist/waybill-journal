@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 00:58",
+  updated: "16 Nov, 01:12",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,14 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "01:12", tags: ["Vehicles", "Building"], title: "The jittering trains: measured, and gone",
+      body: `<p>You said trains \u201Clook somewhat transparent\u201D with \u201Cweird jittering\u201D. Measured live at 3440 \u00D7 1440 while following a train on a busy 1965 game, the old code made a train <b>stall and jump about 30 times every ten seconds</b>; the new code, none.</p>
+      <ul><li><b>The stall and jump:</b> each frame drew vehicles from the simulation's newest step, which was often one step behind the clock. Every frame now draws from the step that holds its exact moment.</li>
+      <li><b>The smear:</b> ships, aircraft and road vehicles never told the picture-sharpening step where they had been, so it smeared them. Fixed.</li>
+      <li><b>A third cause:</b> any train turning round anywhere on the map took the motion data away from every train for one frame.</li></ul>
+      <p>Also tonight: <b>junctions</b>. The geometry was right, but a drag that started beside a line did not join it, a branch could leave at a right angle no train can take, and points at the end of a curve had no room. A drag now snaps at both ends and tries both bends. And <b>six showcase games</b> exist as first versions, one per era from 1853 to 2030, each with 21 to 37 lines, about 30 trains, 45 to 67 road vehicles, boats and, from 1935, aircraft.</p>`,
+      bad: `The \u201Ctransparent\u201D look could not be reproduced in a recording, only the jitter and the smear, so the real test is your eye on the next build. The showcase games have no double-track main line with a big junction station yet, and no passenger ships.` },
+
     { time: "00:58", tags: ["Interface"], title: "Three directions for the interface, for you to choose",
       body: `<p>You said the interface is confusing and needs a complete revisit. Twelve things wrong today were written down after playing it, and three directions were drawn for the whole interface, each at 3440 \u00D7 1440 over a real frame of the game, in the same four moments: a calm game, building a line, a train's window, the new-game screen.</p>
       <ul><li><b>A, a dock on the left</b> with a docked inspector: tools and windows live at the left edge, and what you select opens in one fixed place instead of floating windows.</li>
