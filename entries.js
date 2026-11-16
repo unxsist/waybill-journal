@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 04:19",
+  updated: "16 Nov, 04:37",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
@@ -14,7 +14,7 @@ window.JOURNAL = {
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
       status: "Roads drawn in eight directions with curves, kerbs and markings are switched on, with rewritten traffic that keeps its lane. Seen in the game; in tonight\u2019s next build." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
-      status: "Four looks captured in the game for you to choose. New brick, roofs and per-building paint are made and wait for the next art import." },
+      status: "The land is lush and deep green, towns have street trees, and cities have a modern core. Still open: every house in a street shares one paint scheme; the cause is being traced." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "All 122 figures for seven new eras are built and the game dresses people by year. They reach the game with the next art import." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "04:37", tags: ["World", "Colour"], title: "The same 2030 city, two hours later: lush, with a shaped skyline",
+      body: `<p>The city from the earlier entry, in the game again with tonight's later work in it: the skyline shaped tallest in the middle, the new towers and coloured blocks of flats, the lusher land, and trees along the streets and through the suburbs.</p>
+      <p>Also done for new games: the main river's mouth is dredged so coasters can come in from the sea, and coastal towns have harbours.</p>`,
+      figs: [["world_2030_skyline_green.jpg", "A city in a new 2030 game, from the game itself"]], stack: true,
+      bad: `The houses between the centre and the edge are still mostly the older brown-roofed kinds, and every house in a street still shares one paint scheme, so the suburbs look older and more uniform than a 2030 city should. The 1995 city has not been looked at in the game.` },
+
     { time: "04:19", tags: ["Space"], title: "A first look at space: a rocket stands on its pad, and launches",
       body: `<p>You said: \u201Cif there's room left.. impress me with the space continuation\u201D. In the 2048 showcase game a launch field now places itself on a spit of coast: a 73 m two-stage rocket named Crane beside its 93 m service tower, a hangar, a tank farm, a water tower and lightning masts. Then the countdown, ignition, a long flame, a climb with weight, and the turn out over the sea, with its own sound.</p>
       <p>This is a first look, built in three hours on a separate branch. It is not in the morning build; it should close the showcase film.</p>`,
