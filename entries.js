@@ -1,14 +1,14 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 05:24",
+  updated: "16 Nov, 05:36",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 3,
-      status: "In the build you can play: 60 to 80 frames a second in every view but fast panning (49 to 58), up from 15 to 26 this morning; zooming 60, the fastest speed 65. Left: panning hitches and a rise in memory." },
+      status: "v0.6 holds 58 frames a second on every camera path of a busy region, in 1965 and 2030, on Ultra at 3440 \u00D7 1440 (15 to 26 yesterday morning). About one frame in 200 still stutters." },
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
@@ -26,6 +26,17 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "05:36", tags: ["Performance"], title: "The morning build, measured: it holds the frame cap everywhere",
+      body: `<p>The performance test was run on v0.6 as you will play it: full screen at 3440 \u00D7 1440, Ultra, the interface on, frame rate capped at 59 for FreeSync. On a busy region, across nine camera paths (close in, the default view, fully zoomed out, panning, zooming, a crowded platform, a high street, following a train, following a plane):</p>
+      <ul><li><b>1965:</b> 58.3 frames a second; every path between 57.5 and 58.9.</li>
+      <li><b>2030:</b> 58.6 frames a second; every path between 58.3 and 58.8.</li>
+      <li><b>Where the time goes:</b> the graphics card about 12 ms a frame and the game's own code about 8 ms, against a budget of 16.7.</li>
+      <li><b>Memory:</b> 7.8 GB of video memory.</li></ul>
+      <p>Yesterday morning's build ran at 44 to 55 on the same kind of views when measured gently, 15 to 26 when measured busy, and froze for a third to half a second at a time.</p>`,
+      chart: { type: "bars", title: "Frames a second on a busy region, 3440 \u00D7 1440 Ultra (the cap is 59)", goal: 59, max: 65, goalLabel: "59: the frame cap that keeps FreeSync steady",
+        rows: [["Yesterday, opening view", 25.8, "25.8"], ["Yesterday, whole region", 14.6, "14.6"], ["Yesterday, zooming (evening)", 7, "7 to 17"], ["v0.6, 1965, all nine paths", 57.5, "57.5 to 58.9"], ["v0.6, 2030, all nine paths", 58.3, "58.3 to 58.8"]] },
+      bad: `Not perfect: about one frame in 170 to 330 still takes more than 25 ms, with a worst frame of 93 ms. With FreeSync on those should show as a brief stutter, not a black screen.` },
+
     { time: "05:24", tags: ["Space"], title: "The launch, filmed: on open coast, in summer",
       body: `<p>A second run of the launch has been filmed in the game at 3440 \u00D7 1440, in the 2048 showcase game now set in summer. The field stands on open coast, clear of the woods. Ignition lights the pad without turning the picture white, the cloud rolls off the pad, a ship passes offshore, and the rocket climbs out over the sea trailing smoke.</p>
       <p>The film's maker has the shot and its timing, and records it as the closing shot of the showcase film.</p>`,
