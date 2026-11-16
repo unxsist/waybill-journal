@@ -1,10 +1,10 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 02:08",
+  updated: "16 Nov, 04:04",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
-  note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
+  note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 3,
@@ -26,6 +26,15 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "04:03", tags: ["Performance", "Building", "Sound"], title: "A build with tonight's fixes is in place",
+      body: `<p><b>v0.5f</b> is in your play folder, played through and measured first. It carries most of what the night has answered so far: the camera that always works while building, signals, passing loops, joining track, depots that face the line, stations clear of curves, roads in eight directions with motorways, the modern city cores, the lusher land, sound and music, Dutch, the guided first game, the showcase games, the fix for the jittering trains, and the keys with no clashes.</p>
+      <ul><li><b>Measured:</b> 58 frames a second on the busy region with almost no slow frames; the worst single frame was 93 ms, where last evening's build had one of over a second.</li>
+      <li><b>Played:</b> a first line with two stations, a depot and a train that runs and earns; a showcase game for 1965 that loads with 44 trains; a new game on the region.</li>
+      <li><b>Caught on the way:</b> the three o'clock build froze for up to three seconds at a time, because towns now reshape land all over the map every month and the ground was redrawn in one huge piece. It never reached your folder, and the fix is in this one.</li>
+      <li><b>Passing loops:</b> a loop that ended at a bend could leave trains with no route. Found in the showcase games and fixed before the morning build.</li>
+      <li><b>Ports:</b> no sea-going ship could dock anywhere on the region, because the coast was too shallow beside the land. Coastal towns now get a harbour with a dredged channel to deep water.</li></ul>`,
+      bad: `Every house in a street still has the same colours: the paint that should differ per building does not reach the screen, and the cause is still being traced. The big ships are not in the showcase games, the 2048 game has no maglev, and the showcase main line is single track with passing loops rather than double track with a junction station. Stations still only run north to south or east to west. Nobody has listened to the sound.` },
+
     { time: "02:08", tags: ["World", "Colour"], title: "2030 looks like 2030: a city with a modern core, in the game",
       body: `<p>You said: \u201Ccities have a beautiful core of modern offices and suburbs around it.. I am not feeling that yet\u201D, and that a new game in 2030 \u201Cdoes not feel like 2030 at all\u201D. This is a city in a new 2030 game tonight, from the game itself.</p>
       <ul><li><b>A downtown that reads from far:</b> 17 to 20 towers per city among 56 to 73 offices and blocks of flats, 24 different tower and office types, shaped as a skyline, tallest in the middle.</li>
