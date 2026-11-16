@@ -1,6 +1,6 @@
 window.STATE = {
- "updated": "2026-11-16 07:10",
- "summary": "Waybill is a playable transport tycoon in a photoreal world: you lay track, roads, canals and airports, run trains, buses, lorries, ships and aircraft on lines, carry passengers to the places they want to go and freight through industry chains, in any year from 1850 to 2050. The build to play is v0.6: the result of the quality pass that followed the verdict on v0.4, \u201cwe need to do better than this really\u201d, and of a second round after playing v0.5c. What changed: it holds 58 frames a second at Ultra on a busy 32 km region at 3440 \u00d7 1440; track is dragged over any land with a solid preview, signals, passing loops and depots that face the line; roads run in eight directions with curves and motorways; the land is lush and cities have a modern core; people dress for their year; there are 138 vehicle models, seven busy showcase games, a guided first game, sound, music and Dutch. Honestly not good enough yet: every house in a street still shares one paint scheme, stations run only north to south or east to west, road stops and depots do not find a working spot by themselves, the interface still needs the full revisit that was asked for, nobody has listened to the sound, and several things were built but not proven by play (two trains passing in a new loop, a signal on a tight curve, buying an aircraft or a ship from a newly placed airport or shipyard). Nothing since v0.3 is published.",
+ "updated": "2026-11-16 08:20",
+ "summary": "Waybill is a playable transport tycoon in a photoreal world: you lay track, roads, canals and airports, run trains, buses, lorries, ships and aircraft on lines, carry passengers to the places they want to go and freight through industry chains, in any year from 1850 to 2050. The build to play is v0.6 (v0.6c): the result of the quality pass that followed the verdict on v0.4, \u201cwe need to do better than this really\u201d, and of a second round after playing v0.5c. What changed: it holds 58 frames a second at Ultra on a busy 32 km region at 3440 \u00d7 1440; track is dragged over any land with a solid preview, signals, passing loops and depots that face the line; roads run in eight directions with curves and motorways; the land is lush and cities have a modern core; people dress for their year; there are 138 vehicle models, seven busy showcase games, a guided first game, sound, music and Dutch. Honestly not good enough yet: every house in a street still shares one paint scheme, stations run only north to south or east to west, road stops and depots do not find a working spot by themselves, the interface still needs the full revisit that was asked for, nobody has listened to the sound, and several things were built but not proven by play (two trains passing in a new loop, a signal on a tight curve, buying an aircraft or a ship from a newly placed airport or shipyard). Nothing since v0.3 is published.",
  "releases": [
   {
    "version": "v0.1.0",
@@ -55,7 +55,7 @@ window.STATE = {
    "version": "v0.6",
    "date": "2026-11-16",
    "name": "The morning build (test)",
-   "what": "Everything from the night: placing without stutter, signals, passing loops, depots and stations that line up, a guided first game, Dutch, sound and music, lush land, modern city cores, people of seven eras, seven showcase games and train crashes.",
+   "what": "Everything from the night: placing without stutter, signals, passing loops, depots and stations that line up, a guided first game, Dutch, sound and music, lush land, modern city cores, people of seven eras, seven showcase games and train crashes. The copy in the play folder is v0.6c, which adds coloured town cars and a checked demand map.",
    "published": false
   }
  ],
@@ -131,10 +131,10 @@ window.STATE = {
     "Motorways and trunk-road upgrades by year on the region",
     "Grass and trees cleared from road corridors; junctions no longer flicker",
     "Lorry bodies per cargo and the missing car decades",
-    "Buses feed trains at shared stations, each leg paid"
+    "Buses feed trains at shared stations, each leg paid",
+    "Town cars in their colours again (they were almost all white in v0.6b)"
    ],
    "gaps": [
-    "Most town cars are white in v0.6; the cause is found and fixed for the next build",
     "Road surfaces in the 1965 city centre look wrong close up",
     "Grass tufts still show on some dirt lanes",
     "The newest big lorry wins most routes: the road economy needs a decision",
@@ -200,16 +200,16 @@ window.STATE = {
    "status": "working",
    "now": "Towns send people to particular places, bigger and nearer more; people change between bus and train, each leg is paid, and the station window shows who waits for where.",
    "works": [
-    "A demand map shows who wants to go where, served or not",
+    "A demand map on the N key: the world dims and arcs show who wants to go where, on the big region too",
     "Station and town windows list destinations, carried and waiting",
     "Transfers at stations made of several parts"
    ],
    "gaps": [
-    "The demand map showed nothing on the big region in the morning test, and the freeze reported on its button is not explained yet",
+    "The freeze once reported on the demand button did not come back in testing and was never explained",
     "No changing on foot between two nearby stations",
     "No timetables yet, so waits are estimates"
    ],
-   "pass": "The demand map is on the N key; it is being checked on the busy 1965 region."
+   "pass": "The demand map was checked on the busy 1965 region in v0.6c."
   },
   {
    "name": "Towns and eras",
@@ -259,7 +259,7 @@ window.STATE = {
    ],
    "gaps": [
     "\u201cStill greyish\u201d was the verdict on v0.5c; v0.6 is the answer and has not been judged yet",
-    "Houses of one type share one colour (see Towns)",
+    "Older towns still read beige and grey: houses of one type share one colour (see Towns), which stands out now that the cars are coloured",
     "Vegetation appearing while zooming has not been judged in motion",
     "Winter and autumn are thinner than spring and summer",
     "Glass draws as a dark room; nothing is seen inside a window"
@@ -299,7 +299,6 @@ window.STATE = {
    "gaps": [
     "\u201cConfusing, this needs a complete revisit\u201d: three directions are drawn and wait for a choice; none is built",
     "\u201cShow the gap\u201d on a broken line has not been proven with a real break",
-    "The demand map (see Passengers)",
     "Menu art and a logo wait for the name"
    ],
    "pass": "Fixes for what was reported; the revisit itself is the next run\u2019s work."
@@ -350,7 +349,7 @@ window.STATE = {
   },
   {
    "title": "Prove what was built",
-   "why": "Two trains passing in a new loop, a signal on a curve, an airport, a quay and a shipyard placed and bought from, the demand map, \u201cShow the gap\u201d.",
+   "why": "Two trains passing in a new loop, a signal on a curve, an airport, a quay and a shipyard placed and bought from, \u201cShow the gap\u201d on a really broken line, a maglev that is visibly a maglev in the late showcase game.",
    "when": "next run"
   },
   {

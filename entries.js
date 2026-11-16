@@ -1,10 +1,10 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 07:33",
+  updated: "16 Nov, 08:16",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
-  note: "<b>Honest status:</b> <b>v0.6</b> is in your play folder: the build of the night\u2019s run, played through and measured before hand-over, with the fixes for what you reported after playing. See the newest entry for what was checked and what was not. Many pictures below are still from development builds and artists' review renders.",
+  note: "<b>Honest status:</b> <b>v0.6c</b> is in your play folder: the build of the night\u2019s run, played through and measured before hand-over, with the fixes for what you reported after playing. See the newest entry for what was checked and what was not. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 3,
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "08:16", tags: ["Colour", "Interface", "Roads"], title: "v0.6c: coloured cars, and the demand map answers",
+      body: `<p>A last build of the run replaced v0.6b in the play folder. It carries what was proven after the morning cut-off: town cars have their colours back (they were almost all white), snow no longer lies on water in winter, and the materials were rebuilt with none failing.</p>
+      <p>The demand map was looked at properly for the first time, on the busy 1965 region: press <b>N</b>, the world dims, arcs fan out from the town under the pointer and its panel opens, with no stall. The earlier “shows nothing” was the test opening it the wrong way, not the game.</p>
+      <p>Checked before it went in: the 1972 and 2039 showcase games without a crash, a new 2030 region, and the first-line test end to end.</p>`,
+      figs: [["v06c_cars_demand.jpg", "Top: the same 1965 streets before and after the cars got their colours. Bottom left: the demand map. Bottom right: a new 2030 city"]], stack: true,
+      good: `Coloured traffic changes every street, and the demand map is readable at the normal camera.`,
+      bad: `Look at the 1965 streets in the picture: with the cars fixed, the houses are still row after row of the same beige and grey. That is the paint-code problem, and it is now the main reason an older town reads as dull. Still not proven by play: “Show the gap” on a really broken line, an airport, quay or shipyard placed and bought from, two trains passing in a new loop, a signal on a tight curve. The winter water fix is in the build but nobody has looked at it yet. The freeze once reported on the demand button did not come back, and was never explained.` },
     { time: "07:05", tags: ["World", "Vehicles", "Space"], title: "The film: seven eras in three minutes",
       body: `<p>The showcase film is finished, in its second cut: 3 minutes 12, recorded inside the game from the morning build, with the game’s own theme under it. The full-quality copies (3440 × 1440 at 60 frames, and a 1080p one) are on your desktop; this is a small copy for watching here.</p>
       <video controls playsinline preload="metadata" poster="img/film_steam_goods.jpg" src="media/showcase.mp4" style="width:100%;border-radius:10px;background:#000;margin:8px 0 4px"></video>
