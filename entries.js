@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 06:24",
+  updated: "16 Nov, 06:58",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> <b>v0.6</b> is in your play folder: the build of the night\u2019s run, played through and measured before hand-over, with the fixes for what you reported after playing. See the newest entry for what was checked and what was not. Many pictures below are still from development builds and artists' review renders.",
@@ -40,7 +40,7 @@ window.JOURNAL = {
       <li>58 frames a second on every camera path of a busy region, in 1965 and 2030.</li></ul>
       <p><b>Good to know:</b> the game starts in Dutch on a Dutch Windows; the language is in Settings under Interface. Camera keys are W A S D, Q E, R F and Z X in every tool. The build keys are on each tool's strip: T shape or turn, K height, M tracks, Tab option, Page Up and Page Down for the end's height, Enter for the offered fix.</p>`,
       figs: [["v06_showcases.jpg", "The seven showcase games as they open in v0.6, and the new-game screen with the Showcase row"]], stack: true,
-      bad: `Not proven in this build: two trains actually passing in a new loop, a signal on a tight curve, the \u201CShow the gap\u201D button being pressed, the demand map on the big region, and placing an airport and buying an aircraft from it. One test run quit by itself after 44 seconds, twice across two builds, with no error left behind; it is being re-run to see whether it repeats. Every house in a street still shares one paint scheme, and most town cars are white. Some showcase games open on fields rather than a town. Stations still only run north to south or east to west. Nobody has listened to the sound.` },
+      bad: `Not proven in this build: two trains actually passing in a new loop, a signal on a tight curve, and placing an airport and buying an aircraft from it. The \u201CShow the gap\u201D button was clicked but the camera did not visibly move. The demand map showed nothing on the big region at the normal camera. Most town cars are white (the cause is found and fixed for the next build), and every house in a street still shares one paint scheme. Some showcase games open on fields rather than a town. Stations still only run north to south or east to west. The sound was confirmed to start and play without errors, but nobody has listened to it. A test run that seemed to quit by itself turned out to be stopped by the test tooling, not the game: three further runs ran to the end.` },
 
     { time: "05:36", tags: ["Performance"], title: "The morning build, measured: it holds the frame cap everywhere",
       body: `<p>The performance test was run on v0.6 as you will play it: full screen at 3440 \u00D7 1440, Ultra, the interface on, frame rate capped at 59 for FreeSync. On a busy region, across nine camera paths (close in, the default view, fully zoomed out, panning, zooming, a crowded platform, a high street, following a train, following a plane):</p>
