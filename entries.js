@@ -1,31 +1,47 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 05:36",
+  updated: "16 Nov, 06:24",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
-  note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
+  note: "<b>Honest status:</b> <b>v0.6</b> is in your play folder: the build of the night\u2019s run, played through and measured before hand-over, with the fixes for what you reported after playing. See the newest entry for what was checked and what was not. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
     { n: 1, tag: "Performance", prio: true, title: "It lags; make Ultra playable, 32 km by default", quote: "the game is lagging a lot, both zoomed in but also zoomed out", stage: 3,
       status: "v0.6 holds 58 frames a second on every camera path of a busy region, in 1965 and 2030, on Ultra at 3440 \u00D7 1440 (15 to 26 yesterday morning). About one frame in 200 still stutters." },
-    { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
-      status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
-    { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
+    { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 3,
+      status: "In v0.6: one drag over hills with a solid preview, signals, passing loops, joining track, depots that face the line, a camera that always works, and a guided first game. Stations at any angle are still to come." },
+    { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 3,
       status: "Roads drawn in eight directions with curves, kerbs and markings are switched on, with rewritten traffic that keeps its lane. Seen in the game; in tonight\u2019s next build." },
-    { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
+    { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 2.5,
       status: "The land is lush and deep green, towns have street trees, and cities have a modern core. Still open: every house in a street shares one paint scheme; the cause is being traced." },
-    { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
-      status: "All 122 figures for seven new eras are built and the game dresses people by year. They reach the game with the next art import." },
-    { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
+    { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 3,
+      status: "In v0.6: people of seven eras, dressed by the year, with cheaper far-away versions. Colour variety per person is still to come." },
+    { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 3,
       status: "Motorways with three lanes each way, a central barrier, interchanges and traffic are on screen in a 2030 game. In tonight\u2019s next build." },
-    { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
-      status: "Nine new steam engines, thirteen aircraft in company colours, rebuilt lorries and barges are made. The modern locomotives and coaches are still to be rebuilt. Nothing seen in the game yet." },
-    { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
-      status: "132 models on 159 bodies in tonight\u2019s second build, up from 70 on 78. Road transport now starts in 1850, and every mode has a choice in every decade." }
+    { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 3,
+      status: "In v0.6: new steam engines, liveried aircraft, rebuilt lorries, barges and ships, with trains that no longer jitter. Many were exported without a close look, and the modern locomotives still need rebuilding." },
+    { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 3,
+      status: "In v0.6: 138 models, up from 70, and seven showcase games in which nearly every model of the year is running." }
   ],
 
   entries: [
+    { time: "06:24", tags: ["Performance", "Building", "World"], title: "v0.6 is in your play folder",
+      body: `<p>The morning build (v0.6b) is in place, played through at 3440 \u00D7 1440 and measured before hand-over. The picture shows the seven showcase games as they open in it, and the new-game screen with its Showcase row.</p>
+      <p><b>Checked and working:</b></p>
+      <ul><li>All seven showcase games open from the new-game screen and run.</li>
+      <li>A first line end to end: track, two stations, a depot, a train that runs and earns. The guide leads through it and on to the passing-loop goal.</li>
+      <li>A new 2030 game on the region opens on a city of towers.</li>
+      <li>A staged train crash: a wreck with coaches off the line, smoke, and a news line.</li>
+      <li>A train with a broken line says so and offers \u201CShow the gap\u201D.</li>
+      <li>A passing loop built with the tool; a row of signals built.</li>
+      <li>English to Dutch and back, on the main menu and in Settings.</li>
+      <li>A road with a bus stop, a lorry bay and a depot.</li>
+      <li>58 frames a second on every camera path of a busy region, in 1965 and 2030.</li></ul>
+      <p><b>Good to know:</b> the game starts in Dutch on a Dutch Windows; the language is in Settings under Interface. Camera keys are W A S D, Q E, R F and Z X in every tool. The build keys are on each tool's strip: T shape or turn, K height, M tracks, Tab option, Page Up and Page Down for the end's height, Enter for the offered fix.</p>`,
+      figs: [["v06_showcases.jpg", "The seven showcase games as they open in v0.6, and the new-game screen with the Showcase row"]], stack: true,
+      bad: `Not proven in this build: two trains actually passing in a new loop, a signal on a tight curve, the \u201CShow the gap\u201D button being pressed, the demand map on the big region, and placing an airport and buying an aircraft from it. One test run quit by itself after 44 seconds, twice across two builds, with no error left behind; it is being re-run to see whether it repeats. Every house in a street still shares one paint scheme, and most town cars are white. Some showcase games open on fields rather than a town. Stations still only run north to south or east to west. Nobody has listened to the sound.` },
+
     { time: "05:36", tags: ["Performance"], title: "The morning build, measured: it holds the frame cap everywhere",
       body: `<p>The performance test was run on v0.6 as you will play it: full screen at 3440 \u00D7 1440, Ultra, the interface on, frame rate capped at 59 for FreeSync. On a busy region, across nine camera paths (close in, the default view, fully zoomed out, panning, zooming, a crowded platform, a high street, following a train, following a plane):</p>
       <ul><li><b>1965:</b> 58.3 frames a second; every path between 57.5 and 58.9.</li>
