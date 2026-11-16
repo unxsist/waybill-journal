@@ -1,9 +1,9 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 01:12",
+  updated: "16 Nov, 01:30",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
-  facts: [["8", "points from you"], ["15", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
+  facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
 
   points: [
@@ -26,6 +26,20 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "01:29", tags: ["Building", "Interface"], title: "Halfway through the night: most of your list is answered",
+      body: `<p>Two hours in, these points from your playtest are done and handed over for the three o'clock build:</p>
+      <ul><li><b>The crash</b> when changing controls in Settings: fixed.</li>
+      <li><b>Keys:</b> one table of every key, with no clash anywhere. The camera keys never change with a tool in hand, and each tool shows its keys on its strip.</li>
+      <li><b>Nothing shown that cannot be built yet:</b> tools, modes and options stay hidden before their year.</li>
+      <li><b>\u201CHow do I buy aeroplanes?\u201D</b> After you place an airport, a quay, a shipyard or a depot, a small note says what it is for and its button takes you to the next step.</li>
+      <li><b>The demand button</b> no longer freezes the game: it shows the biggest flows only.</li>
+      <li><b>Dutch:</b> every text in the game goes through one table, including the building hints, the reasons the game gives, the news and the names of things. The language is chosen in Settings or on the main menu, and the game starts in your computer's language.</li>
+      <li><b>A train with a broken line</b> now says so on the train, in its window and in the list of lines, with a button that flies to the gap.</li>
+      <li><b>Train crashes:</b> two trains on a line with no signals protecting them crash where they meet; a signalled passing loop keeps them safe. The wreck blocks the line for about two weeks and costs money to clear. It can be switched off.</li>
+      <li><b>A showcase row</b> on the new-game screen for the six era games.</li></ul>
+      <p>Because the main work is on track, one more specialist has started on a first look at <b>space</b>: a spaceport on the region in the late 2040s, fed by your trains and lorries, and a launch you can watch.</p>`,
+      bad: `The showcase games loading from the new-game screen, the new buy window and the broken-line message have not been seen in a run yet. Still to come tonight: roads drawn in eight directions, the lusher world, less vegetation popping in, placing things without stutter, and sound and music.` },
+
     { time: "01:12", tags: ["Vehicles", "Building"], title: "The jittering trains: measured, and gone",
       body: `<p>You said trains \u201Clook somewhat transparent\u201D with \u201Cweird jittering\u201D. Measured live at 3440 \u00D7 1440 while following a train on a busy 1965 game, the old code made a train <b>stall and jump about 30 times every ten seconds</b>; the new code, none.</p>
       <ul><li><b>The stall and jump:</b> each frame drew vehicles from the simulation's newest step, which was often one step behind the clock. Every frame now draws from the step that holds its exact moment.</li>
