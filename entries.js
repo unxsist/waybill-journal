@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 04:52",
+  updated: "16 Nov, 05:24",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> the build in your play folder is v0.5f, from the night\u2019s run, with most of the fixes for what you reported after playing. The final build of the night, v0.6, follows in the morning with a short film. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "05:24", tags: ["Space"], title: "The launch, filmed: on open coast, in summer",
+      body: `<p>A second run of the launch has been filmed in the game at 3440 \u00D7 1440, in the 2048 showcase game now set in summer. The field stands on open coast, clear of the woods. Ignition lights the pad without turning the picture white, the cloud rolls off the pad, a ship passes offshore, and the rocket climbs out over the sea trailing smoke.</p>
+      <p>The film's maker has the shot and its timing, and records it as the closing shot of the showcase film.</p>`,
+      figs: [["space_summer_pad.jpg", "The field on the coast, moments before ignition"], ["space_ignition.jpg", "Ignition: the cloud begins"], ["space_over_sea.jpg", "The cloud rolls off the pad as the rocket lifts"]],
+      bad: `The flame is a solid glowing shape that only reads from a distance, and the light on the ground at ignition is still very strong. The simulation knows nothing of the field: it takes no cargo, and a town could later build into it. Nobody has listened to the sound. It is not in v0.6; it waits on a performance check before it can be merged.` },
+
     { time: "04:37", tags: ["World", "Colour"], title: "The same 2030 city, two hours later: lush, with a shaped skyline",
       body: `<p>The city from the earlier entry, in the game again with tonight's later work in it: the skyline shaped tallest in the middle, the new towers and coloured blocks of flats, the lusher land, and trees along the streets and through the suburbs.</p>
       <p>Also done for new games: the main river's mouth is dredged so coasters can come in from the sea, and coastal towns have harbours.</p>`,
