@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 01:53",
+  updated: "16 Nov, 02:08",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,17 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "02:08", tags: ["World", "Colour"], title: "2030 looks like 2030: a city with a modern core, in the game",
+      body: `<p>You said: \u201Ccities have a beautiful core of modern offices and suburbs around it.. I am not feeling that yet\u201D, and that a new game in 2030 \u201Cdoes not feel like 2030 at all\u201D. This is a city in a new 2030 game tonight, from the game itself.</p>
+      <ul><li><b>A downtown that reads from far:</b> 17 to 20 towers per city among 56 to 73 offices and blocks of flats, 24 different tower and office types, shaped as a skyline, tallest in the middle.</li>
+      <li><b>Green suburbs:</b> street trees on every straight street, lawns round the estates, planted squares and greens: about 15,500 trees in the towns of a 2030 region, 9,300 in 1965.</li>
+      <li><b>The edges:</b> retail and business parks by the roads out, and nine wind farms on the hills from 1995.</li>
+      <li><b>In the streets:</b> solar roofs, electric-car chargers, bike-share docks.</li>
+      <li><b>Station ground:</b> a level, straight site beside the centre of all 62 cities, towns and villages.</li>
+      <li><b>Country:</b> copses, soft wood edges, willows by the water, more trees in the hedgerows, and motorways cleared of trees.</li></ul>`,
+      figs: [["world_2030_city_skyline.jpg", "A city in a new 2030 game, from the game: a core of towers and offices with tree-lined suburbs round it"]], stack: true,
+      bad: `This frame was taken before the skyline was shaped tallest-in-the-middle; the shaped version and the 1995 city have not been looked at in the game yet. The suburbs are still mostly older brown-roofed houses, so the ring between the towers and the edge looks older than 2030. Hedges still show as tile staircases at shallow angles, and from very high up the fields still read as a quilt.` },
+
     { time: "01:53", tags: ["Roads"], title: "The zigzag roads are gone, and there are motorways",
       body: `<p>The new road surfaces are switched on, seen in motion in the game at 3440 \u00D7 1440 on the 32 km region, and handed over for the next build. Roads run in <b>eight directions with curves</b>, with kerbs, pavements and markings, and traffic keeps its lane on them. Town cars cross road bridges again.</p>
       <p>In a 2030 game the <b>motorways</b> are on screen and driven: three lanes each way, a central barrier, lamps, a gantry sign, cars and vans in lane.</p>`,
