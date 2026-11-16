@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 06:58",
+  updated: "16 Nov, 07:04",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> <b>v0.6</b> is in your play folder: the build of the night\u2019s run, played through and measured before hand-over, with the fixes for what you reported after playing. See the newest entry for what was checked and what was not. Many pictures below are still from development builds and artists' review renders.",
@@ -26,6 +26,13 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "07:05", tags: ["World", "Vehicles", "Space"], title: "The film: seven eras in three and a half minutes",
+      body: `<p>The showcase film is finished: 3 minutes 27, 25 shots, recorded inside the game from the morning build, with the game’s own theme under it. The full-quality copies (3440 × 1440 at 60 frames, and a 1080p one) are on your desktop; this is a small copy for watching here.</p>
+      <video controls playsinline preload="metadata" poster="img/film_steam_goods.jpg" src="media/showcase.mp4" style="width:100%;border-radius:10px;background:#000;margin:8px 0 4px"></video>
+      <p>It walks through the seven showcase games in order, each opening on its year: 1860 (the town, a steam goods train, the canal quay), 1914 (the clock-tower centre, steam, the quay), a line being built with the interface on screen, 1943 (the station under steam, the harbour), 1972 (the riverfront, a diesel and the express), 2004 (the motorway, the container port, an airliner), 2039 (the high-rise city, the motorway) and 2059 (the station hall), closing on the rocket leaving the coast pad.</p>`,
+      figs: [["film_1914_centre.jpg", "1914: the clock-tower centre"], ["film_steam_goods.jpg", "1914: a goods train followed across the fields"], ["film_2039_city.jpg", "2039: the city core"], ["film_launch.jpg", "2059: the launch that closes the film"]],
+      good: `No black gaps or missing parts in any shot. The eras read at a glance, the followed trains are the strongest shots, and the launch is a real ending.`,
+      bad: `It is a fair record of the game, not yet a trailer. The opening sits nine seconds on a still, grey roofscape. The 2039 maglev shot shows the guideway but no train. The aircraft flies eleven seconds over an empty field instead of using an airport. The 2039 city opens in deep shadow. Most shots drift slowly where they should move. There is music but no sound of the world under it, the year titles are small, town cars are still white, and the launch site’s ground and sea are a first look, with visible tile edges. A second cut that fixes the opening, the maglev and the aircraft is being recorded now.` },
     { time: "06:24", tags: ["Performance", "Building", "World"], title: "v0.6 is in your play folder",
       body: `<p>The morning build (v0.6b) is in place, played through at 3440 \u00D7 1440 and measured before hand-over. The picture shows the seven showcase games as they open in it, and the new-game screen with its Showcase row.</p>
       <p><b>Checked and working:</b></p>
