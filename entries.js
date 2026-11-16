@@ -1,7 +1,7 @@
 // The journal's content. Newest entry first. Edited by the coordinator; published with tools/journal/publish.sh.
 window.JOURNAL = {
   date: "Sunday 15 November 2026",
-  updated: "16 Nov, 01:50",
+  updated: "16 Nov, 01:53",
   lead: "You played v0.4 and said <b>“we need to do better than this really”</b>. This is the pass that answers it: performance on your machine, building that makes sense, real roads, colour, people of their time, and vehicles worth looking at. v0.4 stays unpublished; the next build is <b>v0.5</b>.",
   facts: [["8", "points from you"], ["17", "specialists at work tonight"], ["132", "vehicle models, was 70"], ["171", "new textures and liveries"]],
   note: "<b>Honest status:</b> v0.5c is the build to play tonight: the 32 km region by default, the performance fixes and the new building tools, with known faults (see the newest entries). v0.5d follows later tonight with the rest of the art. Many pictures below are still from development builds and artists' review renders.",
@@ -12,13 +12,13 @@ window.JOURNAL = {
     { n: 2, tag: "Building", prio: true, title: "Building rails and roads is confusing", quote: "especially when dealing with height differences … it's not fun", stage: 1.5,
       status: "Track is never refused for height and goes round houses. The solid preview, the labels and a side profile now run in the game; not merged yet." },
     { n: 3, tag: "Roads", title: "Zigzag roads, wonky traffic", quote: "no diagonal roads makes the thing go zigzag and looks hilarious with the lorries", stage: 1.5,
-      status: "The traffic rewrite is in the game: lanes kept, weight in braking, junctions that clear. The surfaces that draw diagonal and curved roads are still being rebuilt, so roads still zigzag on screen." },
+      status: "Roads drawn in eight directions with curves, kerbs and markings are switched on, with rewritten traffic that keeps its lane. Seen in the game; in tonight\u2019s next build." },
     { n: 4, tag: "Colour", title: "Bland, grey, industrial", quote: "i want more colour in every era", stage: 1.5,
       status: "Four looks captured in the game for you to choose. New brick, roofs and per-building paint are made and wait for the next art import." },
     { n: 5, tag: "People", title: "People in 2050 look like the 1800s", quote: "people in 2050 still look like 1800s", stage: 1.5,
       status: "All 122 figures for seven new eras are built and the game dresses people by year. They reach the game with the next art import." },
     { n: 6, tag: "Roads", title: "Highways in later eras", quote: "what about highways the further we get into the game?", stage: 1.5,
-      status: "Motorways from 1960 with overtaking lanes, rising speeds and diamond interchanges are in the simulation, and roads upgrade in place. The drawing is next." },
+      status: "Motorways with three lanes each way, a central barrier, interchanges and traffic are on screen in a 2030 game. In tonight\u2019s next build." },
     { n: 7, tag: "Vehicles", title: "Every vehicle to the locomotive's standard", quote: "the locomotive looks great, others are ‘mediocre at best’", stage: 1.5,
       status: "Nine new steam engines, thirteen aircraft in company colours, rebuilt lorries and barges are made. The modern locomotives and coaches are still to be rebuilt. Nothing seen in the game yet." },
     { n: 8, tag: "Variety", title: "More variety per era", quote: "more variety on trains/vehicles/planes/boats per era.. just like in ttd", stage: 1.5,
@@ -26,6 +26,12 @@ window.JOURNAL = {
   ],
 
   entries: [
+    { time: "01:53", tags: ["Roads"], title: "The zigzag roads are gone, and there are motorways",
+      body: `<p>The new road surfaces are switched on, seen in motion in the game at 3440 \u00D7 1440 on the 32 km region, and handed over for the next build. Roads run in <b>eight directions with curves</b>, with kerbs, pavements and markings, and traffic keeps its lane on them. Town cars cross road bridges again.</p>
+      <p>In a 2030 game the <b>motorways</b> are on screen and driven: three lanes each way, a central barrier, lamps, a gantry sign, cars and vans in lane.</p>`,
+      figs: [["roads_surfaces_1965.jpg", "A 1965 town in the game with the new road surfaces"], ["roads_motorway_2030.jpg", "A motorway in a 2030 game"]],
+      bad: `In the city centre close up there were tan gaps and stray pavement islands inside blocks of road; a fix is in the build but has not been seen yet. A full-grown tree stands on the motorway's hard shoulder: trees are not yet cleared from a road's whole width. The jitter you saw on roads is next. The 1990s motorway look has not been checked.` },
+
     { time: "01:49", tags: ["Colour", "Sound"], title: "A lusher land, and the game has sound and music",
       body: `<p><b>A lush land.</b> The first piece of tonight's colour work is in: the land is a deep, living green instead of olive, every tree has its own green, shade keeps its colour, and there is less haze.</p>
       <p><b>The towns are still beige.</b> In the town half of that picture every block was the same colour, although each building should have its own paint. A first check suggested the colour data on the models was being lost on the way into the game; a second, correct check showed it is intact (the first used a broken test). So the cause lies elsewhere, most likely in the material that should apply the paint, and it is being traced now.</p>
